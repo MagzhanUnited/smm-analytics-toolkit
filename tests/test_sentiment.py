@@ -1,5 +1,6 @@
 import pytest
 
+from smmkit.io import load_comments
 from smmkit.sentiment import LexiconClassifier, evaluate
 
 clf = LexiconClassifier()
@@ -58,3 +59,11 @@ def test_evaluate_known_values():
 def test_evaluate_rejects_bad_input(y_true, y_pred, match):
     with pytest.raises(ValueError, match=match):
         evaluate(y_true, y_pred)
+
+
+def test_baseline_on_sample_is_better_than_majority_class(sample_dir):
+    comments = load_comments(sample_dir / "comments_labelled.csv", salt="s")
+    report = evaluate([c.label for c in comments], clf.predict(c.text for c in comments))
+    majority = max(sum(c.label == lab for c in comments) for lab in ("positive", "neutral", "negative"))
+    assert report.accuracy > majority / len(comments)
+    assert report.macro_f1 < 1.0  # hard cases (sarcasm, mixed) must stay hard
