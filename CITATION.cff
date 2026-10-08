@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software in research, please cite it as below."
+title: "smm-analytics-toolkit: engagement metrics and a sentiment baseline for SMM research"
+authors:
+  - family-names: Zhumabayev
+    given-names: Magzhan
+    affiliation: Astana IT University
+version: 0.1.0
+date-released: 2026-10-08
+license: MIT
+repository-code: "https://github.com/OWNER/smm-analytics-toolkit"
+keywords:
+  - social media marketing
+  - engagement rate
+  - sentiment analysis
+  - Kazakh
+  - reproducible research
