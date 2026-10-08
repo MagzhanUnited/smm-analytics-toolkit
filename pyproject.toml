@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smm-analytics-toolkit"
+version = "0.1.0"
+description = "Reproducible engagement metrics and a sentiment baseline for social-media marketing research (Russian/Kazakh)."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Magzhan Zhumabayev" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["smm", "marketing analytics", "sentiment analysis", "kazakh", "reproducible research"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.5", "build>=1.0"]
+
+[project.scripts]
+smmkit = "smmkit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+smmkit = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["smmkit"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
