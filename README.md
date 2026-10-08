@@ -1,6 +1,6 @@
 # smm-analytics-toolkit
 
-[![CI](https://github.com/OWNER/smm-analytics-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/smm-analytics-toolkit/actions/workflows/ci.yml)
+[![CI](https://github.com/MagzhanUnited/smm-analytics-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/MagzhanUnited/smm-analytics-toolkit/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python 3.9–3.12](https://img.shields.io/badge/python-3.9%E2%80%933.12-blue)
 
@@ -29,7 +29,7 @@ a `predict(texts) -> list[str]` method and calling `smmkit.evaluate`.
 ## Installation
 
 ```bash
-git clone https://github.com/OWNER/smm-analytics-toolkit.git
+git clone https://github.com/MagzhanUnited/smm-analytics-toolkit.git
 cd smm-analytics-toolkit
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[plot]"          # add ,dev for tests and linting
