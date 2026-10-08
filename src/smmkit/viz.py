@@ -33,10 +33,12 @@ def engagement_heatmap(posts, path) -> Path:
     im = ax.imshow(grid, cmap="Blues", aspect="auto")
     ax.set_xticks(range(len(blocks)), [f"{b:02d}-{b + 3:02d}" for b in blocks])
     ax.set_yticks(range(len(WEEKDAYS)), WEEKDAYS)
+    top = max((v for row in grid for v in row if v == v), default=0.0)
     for r, row in enumerate(grid):
         for c, v in enumerate(row):
             if v == v:  # not NaN
-                ax.text(c, r, f"{v:.1f}", ha="center", va="center", fontsize=8)
+                colour = "white" if v > 0.6 * top else "black"  # keep labels readable on dark cells
+                ax.text(c, r, f"{v:.1f}", ha="center", va="center", fontsize=8, color=colour)
     fig.colorbar(im, ax=ax, label="mean ER, %")
     ax.set_title("Engagement rate by weekday and time of day")
     fig.tight_layout()
@@ -56,9 +58,10 @@ def confusion_matrix(evaluation, path) -> Path:
     ax.set_yticks(range(len(labels)), labels)
     ax.set_xlabel("predicted")
     ax.set_ylabel("true")
+    top = max(max(row) for row in grid) or 1
     for r, row in enumerate(grid):
         for c, v in enumerate(row):
-            ax.text(c, r, str(v), ha="center", va="center")
+            ax.text(c, r, str(v), ha="center", va="center", color="white" if v > 0.6 * top else "black")
     ax.set_title(f"Confusion matrix (macro-F1 {evaluation.macro_f1:.2f})")
     fig.tight_layout()
     path = Path(path)
