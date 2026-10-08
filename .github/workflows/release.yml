@@ -1,0 +1,27 @@
+name: Release
+
+# Continuous delivery: pushing a tag like v0.1.0 runs the tests, builds the
+# package and publishes it as a GitHub Release with the wheel attached.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev,plot]"
+      - run: pytest --cov=smmkit --cov-fail-under=90
+      - run: python -m build
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true
