@@ -85,7 +85,7 @@ pipeline {
                     docker run -d --rm --name "$name" ${IMAGE}:${TAG}
                     trap 'docker rm -f "$name" >/dev/null 2>&1 || true' EXIT
                     for i in $(seq 1 20); do
-                        if docker exec "$name" python -c "import urllib.request,sys; sys.stdout.write(urllib.request.urlopen('http://127.0.0.1:8080/healthz').read().decode())"; then
+                        if docker exec "$name" python -c "import urllib.request,sys; sys.stdout.write(urllib.request.urlopen('http://127.0.0.1:8080/healthz').read().decode())" 2>/dev/null; then
                             echo; echo "container healthy after $i attempt(s)"; exit 0
                         fi
                         sleep 1
