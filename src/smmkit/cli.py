@@ -1,4 +1,4 @@
-"""Command-line interface: ``smmkit report``, ``smmkit metrics``, ``smmkit evaluate``."""
+"""Command-line interface: ``smmkit report``, ``metrics``, ``evaluate`` and ``serve``."""
 
 from __future__ import annotations
 
@@ -58,6 +58,21 @@ def cmd_report(args) -> int:
     return 0
 
 
+def cmd_serve(args) -> int:
+    from smmkit.serve import make_server
+
+    posts = load_posts(args.posts)
+    ev = _evaluate(load_comments(args.comments, _salt(args))) if args.comments else None
+    server = make_server(posts, render(posts, ev), args.host, args.port)
+    print(f"serving {len(posts)} posts on http://{args.host}:{server.server_port}", flush=True)
+    if args.once:  # handle a single request; used by tests and smoke checks
+        server.handle_request()
+    else:  # pragma: no cover - blocking loop, exercised by the container smoke test
+        server.serve_forever()
+    server.server_close()
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="smmkit", description=__doc__)
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
@@ -80,6 +95,15 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--plots", action="store_true", help="also write PNG plots (needs matplotlib)")
     r.add_argument("--salt", help=f"pseudonymisation salt (default: ${SALT_ENV})")
     r.set_defaults(func=cmd_report)
+
+    s = sub.add_parser("serve", help="serve the report, /healthz and /api/metrics over HTTP")
+    s.add_argument("--posts", required=True)
+    s.add_argument("--comments")
+    s.add_argument("--host", default="0.0.0.0")
+    s.add_argument("--port", type=int, default=8080)
+    s.add_argument("--salt", help=f"pseudonymisation salt (default: ${SALT_ENV})")
+    s.add_argument("--once", action="store_true", help=argparse.SUPPRESS)
+    s.set_defaults(func=cmd_serve)
     return parser
 
 
