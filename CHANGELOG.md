@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- `smmkit serve`: read-only HTTP service with `/`, `/healthz` and `/api/metrics`.
+- Multi-stage `Dockerfile` (non-root runtime, health check, OCI labels).
+- `Jenkinsfile`: lint, unit tests with JUnit and coverage, image build, smoke test; push and
+  rolling deployment to a kind Kubernetes cluster from `main`.
+- Jenkins as code in `ci/jenkins/` and Kubernetes manifests in `deploy/`.
+
 ## 0.1.0 — 2026-10-08
 
 - Anonymisation of comments (URLs, e-mails, Kazakhstani phone numbers, @handles) and salted author pseudonyms.
