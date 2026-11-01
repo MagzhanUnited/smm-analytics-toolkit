@@ -1,0 +1,32 @@
+# Local CI stack: Jenkins controller + Docker registry, attached to the kind network.
+#   kind create cluster --config deploy/kind-config.yaml
+#   ./ci/jenkins/up.sh
+name: smmkit-ci
+services:
+  jenkins:
+    build: .
+    image: smmkit-jenkins:local
+    container_name: smmkit-jenkins
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      JENKINS_ADMIN_PASSWORD: ${JENKINS_ADMIN_PASSWORD:?set it in ci/jenkins/.env}
+      KUBECONFIG: /var/jenkins_home/kubeconfig
+    group_add: ["0"]            # access to the host Docker socket (root group on Docker Desktop)
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./kubeconfig:/var/jenkins_home/kubeconfig:ro
+    networks: [default, kind]
+  registry:
+    image: registry:2
+    container_name: smmkit-registry
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5001:5000"
+volumes:
+  jenkins_home:
+networks:
+  kind:
+    external: true

@@ -1,0 +1,37 @@
+# Jenkins Configuration as Code: users, permissions and the pipeline job are created at start-up,
+# so the whole CI server can be rebuilt with `docker compose up` and nothing is clicked by hand.
+jenkins:
+  systemMessage: "smm-analytics-toolkit CI/CD (local Jenkins, configured as code)"
+  numExecutors: 2
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          name: Administrator
+          password: "${JENKINS_ADMIN_PASSWORD}"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: true
+unclassified:
+  location:
+    url: http://localhost:8080/
+jobs:
+  - script: >
+      multibranchPipelineJob('smm-analytics-toolkit') {
+        displayName('smm-analytics-toolkit')
+        description('Builds every branch of github.com/MagzhanUnited/smm-analytics-toolkit; deploys main to kind.')
+        branchSources {
+          branchSource {
+            source {
+              git {
+                id('smmkit-github')
+                remote('https://github.com/MagzhanUnited/smm-analytics-toolkit.git')
+                traits { gitBranchDiscovery() }
+              }
+            }
+          }
+        }
+        triggers { periodicFolderTrigger { interval('1m') } }
+        orphanedItemStrategy { discardOldItems { numToKeep(10) } }
+      }
