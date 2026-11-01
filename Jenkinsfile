@@ -81,7 +81,8 @@ pipeline {
         stage('Smoke test image') {
             steps {
                 sh '''
-                    name=smoke-${BUILD_TAG}
+                    # BUILD_TAG holds the branch name (e.g. feature%2Fx); Docker allows only [a-zA-Z0-9_.-]
+                    name=smoke-$(printf '%s' "${BUILD_TAG}" | tr -c 'a-zA-Z0-9_.-' '-')
                     docker run -d --rm --name "$name" ${IMAGE}:${TAG}
                     trap 'docker rm -f "$name" >/dev/null 2>&1 || true' EXIT
                     for i in $(seq 1 20); do
