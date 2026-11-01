@@ -79,6 +79,30 @@ base, which is not published.
 
 ![Engagement heatmap](docs/sample-report/engagement_heatmap.png)
 
+## Container and CI/CD
+
+```bash
+docker build -t smmkit .
+docker run --rm -p 8080:8080 smmkit          # GET /, /healthz, /api/metrics?by=format
+docker run --rm smmkit metrics data/sample/posts.csv --by weekday
+```
+
+The repository carries two pipelines:
+
+| Pipeline | File | What it does |
+|---|---|---|
+| GitHub Actions | `.github/workflows/ci.yml` | lint, tests on Python 3.9–3.12, package build, release on tag |
+| Jenkins | `Jenkinsfile` | every commit of every branch: lint → unit tests (JUnit, coverage ≥ 90 %) → Docker image → smoke test; `main` only: push to registry → rolling update on Kubernetes → health check |
+
+The Jenkins server is described as code (`ci/jenkins/`: image with Python, Docker CLI, kubectl and kind;
+plugins list; JCasC file that creates the users and the multibranch job). A local stack starts with:
+
+```bash
+./ci/jenkins/up.sh   # kind cluster "smm-ci" + Jenkins on :8080 + registry on :5001
+```
+
+The deployed service is exposed by the kind node on http://localhost:8081 (`deploy/k8s/`).
+
 ## Development
 
 ```bash

@@ -13,3 +13,8 @@ out/
 .DS_Store
 # real exports never go to the repository
 data/raw/
+
+# local CI secrets
+ci/jenkins/.env
+ci/jenkins/kubeconfig
+reports/
