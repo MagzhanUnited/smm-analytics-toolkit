@@ -35,34 +35,34 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv .venv
-                    . .venv/bin/activate
-                    pip install --quiet -e ".[dev]"
-                    python --version && pip list | grep -E "pytest|ruff|smm"
+                    .venv/bin/pip install --quiet -e ".[dev,plot]"
+                    .venv/bin/python --version
+                    .venv/bin/pip list 2>/dev/null | grep -E "pytest|ruff|matplotlib|smm"
                 '''
             }
         }
 
         stage('Lint') {
             steps {
-                sh '. .venv/bin/activate && ruff check . && ruff format --check .'
+                sh '.venv/bin/ruff check . && .venv/bin/ruff format --check .'
             }
         }
 
         stage('Unit tests') {
             steps {
                 sh '''
-                    . .venv/bin/activate
                     mkdir -p reports
-                    pytest --junitxml=reports/junit.xml \
+                    .venv/bin/pytest --junitxml=reports/junit.xml \
                            --cov=smmkit --cov-report=term --cov-report=xml:reports/coverage.xml \
                            --cov-fail-under=90
                 '''
             }
             post {
                 always {
-                    junit 'reports/junit.xml'
+                    junit testResults: 'reports/junit.xml', skipPublishingChecks: true
                     recordCoverage(tools: [[parser: 'COBERTURA', pattern: 'reports/coverage.xml']],
-                                   sourceDirectories: [[path: 'src']])
+                                   sourceDirectories: [[path: 'src']],
+                                   enabledForFailure: true, skipPublishingChecks: true)
                 }
             }
         }
