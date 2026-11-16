@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/MagzhanUnited/smm-analytics-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/MagzhanUnited/smm-analytics-toolkit/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Python 3.9–3.12](https://img.shields.io/badge/python-3.9%E2%80%933.12-blue)
+![Python 3.10–3.13](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue)
 
 Reproducible engagement metrics and a sentiment-classification baseline for social-media
 marketing (SMM) research on Russian and Kazakh content.
@@ -91,7 +91,7 @@ The repository carries two pipelines:
 
 | Pipeline | File | What it does |
 |---|---|---|
-| GitHub Actions | `.github/workflows/ci.yml` | lint, tests on Python 3.9–3.12, package build, release on tag |
+| GitHub Actions | `.github/workflows/ci.yml` | lint, tests on Python 3.10–3.13, package build, release on tag |
 | Jenkins | `Jenkinsfile` | every commit of every branch: lint → unit tests (JUnit, coverage ≥ 90 %) → Docker image → smoke test; `main` only: push to registry → rolling update on Kubernetes → health check |
 
 The Jenkins server is described as code (`ci/jenkins/`: image with Python, Docker CLI, kubectl and kind;
@@ -112,7 +112,7 @@ pytest --cov=smmkit
 ```
 
 Continuous integration (`.github/workflows/ci.yml`) runs on every push and pull request:
-lint with ruff → tests on Python 3.9, 3.10, 3.11 and 3.12 with a 90 % coverage gate → build of
+lint with ruff → tests on Python 3.10, 3.11, 3.12 and 3.13 with a 90 % coverage gate → build of
 the wheel, which is installed and run on the sample data; the package and the sample report are
 kept as build artifacts. Continuous delivery (`.github/workflows/release.yml`): pushing a tag
 `v*` re-runs the tests, builds the package and publishes a GitHub Release with the wheel attached.

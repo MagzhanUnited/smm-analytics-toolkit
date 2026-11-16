@@ -155,7 +155,7 @@ def evaluate(y_true, y_pred, labels=LABELS) -> EvaluationReport:
     if not y_true:
         raise ValueError("cannot evaluate an empty sample")
     confusion = {t: {p: 0 for p in labels} for t in labels}
-    for t, p in zip(y_true, y_pred):
+    for t, p in zip(y_true, y_pred, strict=True):
         if t not in confusion or p not in confusion:
             raise ValueError(f"unknown label in pair ({t!r}, {p!r})")
         confusion[t][p] += 1
