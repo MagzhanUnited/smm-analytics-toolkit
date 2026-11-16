@@ -28,7 +28,10 @@ def engagement_heatmap(posts, path) -> Path:
         r, c = p.published_at.weekday(), p.published_at.hour // 3
         sums[r][c] += engagement_rate(p)
         counts[r][c] += 1
-    grid = [[(s / n * 100 if n else float("nan")) for s, n in zip(sr, cr)] for sr, cr in zip(sums, counts)]
+    grid = [
+        [(s / n * 100 if n else float("nan")) for s, n in zip(sr, cr, strict=True)]
+        for sr, cr in zip(sums, counts, strict=True)
+    ]
     fig, ax = plt.subplots(figsize=(8, 3.6))
     im = ax.imshow(grid, cmap="Blues", aspect="auto")
     ax.set_xticks(range(len(blocks)), [f"{b:02d}-{b + 3:02d}" for b in blocks])

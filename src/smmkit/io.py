@@ -10,11 +10,10 @@ import csv
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Union
 
 from smmkit.anonymise import pseudonymise, scrub_text
 
-PathLike = Union[str, Path]
+PathLike = str | Path
 
 POST_COLUMNS = (
     "post_id",

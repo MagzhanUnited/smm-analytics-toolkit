@@ -7,6 +7,8 @@
 - `Jenkinsfile`: lint, unit tests with JUnit and coverage, image build, smoke test; push and
   rolling deployment to a kind Kubernetes cluster from `main`.
 - Jenkins as code in `ci/jenkins/` and Kubernetes manifests in `deploy/`.
+- Supported Python is now 3.10–3.13: GitHub-hosted Ubuntu 26.04 runners no longer provide Python 3.9,
+  which broke the CI matrix. `zip(..., strict=True)` and `X | Y` annotations follow from the new target.
 
 ## 0.1.0 — 2026-10-08
 
