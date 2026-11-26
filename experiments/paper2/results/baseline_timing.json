@@ -1,0 +1,118 @@
+{
+ "environment": {
+  "python": "3.12.14",
+  "machine": "Darwin arm64",
+  "numpy": "2.5.5",
+  "pandas": "3.1.1",
+  "sklearn": "1.9.1",
+  "torch": "2.15.0",
+  "transformers": "5.24.1"
+ },
+ "training_running_at_start": false,
+ "tasks": {
+  "p3": {
+   "selected": {
+    "C": 0.25,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5527,
+    "fit_seconds": 21.68,
+    "iterations": 141
+   },
+   "configurations": 11,
+   "tried": {
+    "none": {
+     "0.25": 0.5142,
+     "0.5": 0.5212,
+     "1.0": 0.5282,
+     "4.0": 0.5314,
+     "16.0": 0.5214
+    },
+    "balanced": {
+     "0.125": 0.5493,
+     "0.25": 0.5527,
+     "0.5": 0.552,
+     "1.0": 0.548,
+     "4.0": 0.5324,
+     "16.0": 0.5126
+    }
+   },
+   "grid_seconds": 292.76,
+   "train_seconds": 29.16,
+   "vectoriser_seconds": 7.48,
+   "throughput_linear": {
+    "texts": 17516,
+    "seconds": 0.729,
+    "texts_per_second": 24042.0
+   },
+   "throughput_lexicon": {
+    "texts": 17516,
+    "seconds": 0.069,
+    "texts_per_second": 255578.8
+   },
+   "stored": {
+    "grid_seconds": 339.75,
+    "train_seconds": 35.34
+   }
+  },
+  "pc": {
+   "selected": {
+    "C": 4.0,
+    "class_weight": "none",
+    "valid_macro_f1": 0.7827,
+    "fit_seconds": 2.6,
+    "iterations": 59
+   },
+   "configurations": 10,
+   "tried": {
+    "none": {
+     "0.25": 0.7658,
+     "0.5": 0.7762,
+     "1.0": 0.7815,
+     "4.0": 0.7827,
+     "16.0": 0.7693
+    },
+    "balanced": {
+     "0.25": 0.7661,
+     "0.5": 0.7703,
+     "1.0": 0.7741,
+     "4.0": 0.7749,
+     "16.0": 0.7615
+    }
+   },
+   "grid_seconds": 32.36,
+   "train_seconds": 8.93,
+   "vectoriser_seconds": 6.33,
+   "throughput_linear": {
+    "texts": 16797,
+    "seconds": 0.679,
+    "texts_per_second": 24736.9
+   },
+   "throughput_lexicon": {
+    "texts": 16797,
+    "seconds": 0.065,
+    "texts_per_second": 260049.0
+   },
+   "stored": {
+    "grid_seconds": 40.81,
+    "train_seconds": 12.23
+   }
+  }
+ },
+ "threads": {
+  "limit": 1,
+  "pools": [
+   {
+    "user_api": "openmp",
+    "internal_api": "openmp",
+    "num_threads": 1
+   },
+   {
+    "user_api": "openmp",
+    "internal_api": "openmp",
+    "num_threads": 1
+   }
+  ]
+ },
+ "training_running_at_end": false,
+ "measured": "2026-11-26 16:00:21"
+}

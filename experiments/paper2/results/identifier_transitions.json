@@ -1,0 +1,1865 @@
+{
+ "probe": {
+  "texts": 1000,
+  "identifier_formats": 7,
+  "perturbed": 14000,
+  "restored_by_removal": 14000,
+  "distinct_inputs_with_placeholder": 8000
+ },
+ "models": {
+  "linear": {
+   "left_in_text": {
+    "changed": 2444,
+    "moves": {
+     "negative>neutral": 738,
+     "negative>positive": 149,
+     "neutral>negative": 23,
+     "neutral>positive": 118,
+     "positive>negative": 14,
+     "positive>neutral": 1402
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2940,
+      "changed": 887
+     },
+     "neutral": {
+      "perturbed": 1666,
+      "changed": 141
+     },
+     "positive": {
+      "perturbed": 9394,
+      "changed": 1416
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 97,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 477,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 651,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 101,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 126,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 862,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 130,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     }
+    ]
+   },
+   "placeholder": {
+    "changed": 919,
+    "moves": {
+     "negative>neutral": 17,
+     "negative>positive": 473,
+     "neutral>negative": 29,
+     "neutral>positive": 400
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2940,
+      "changed": 490
+     },
+     "neutral": {
+      "perturbed": 1666,
+      "changed": 429
+     },
+     "positive": {
+      "perturbed": 9394,
+      "changed": 0
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 152,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 120,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 120,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 120,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 95,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 156,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 156,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     }
+    ]
+   }
+  },
+  "xlmr_p3_full_s1": {
+   "left_in_text": {
+    "changed": 528,
+    "moves": {
+     "negative>neutral": 2,
+     "negative>positive": 339,
+     "neutral>negative": 6,
+     "neutral>positive": 87,
+     "positive>negative": 92,
+     "positive>neutral": 2
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2100,
+      "changed": 341
+     },
+     "neutral": {
+      "perturbed": 224,
+      "changed": 93
+     },
+     "positive": {
+      "perturbed": 11676,
+      "changed": 94
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 76,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 94,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 91,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 61,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 71,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 66,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 69,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     }
+    ]
+   },
+   "placeholder": {
+    "changed": 435,
+    "moves": {
+     "negative>positive": 92,
+     "neutral>negative": 25,
+     "neutral>positive": 68,
+     "positive>negative": 242,
+     "positive>neutral": 8
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2100,
+      "changed": 92
+     },
+     "neutral": {
+      "perturbed": 224,
+      "changed": 93
+     },
+     "positive": {
+      "perturbed": 11676,
+      "changed": 250
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 52,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 60,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 60,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 60,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 73,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 65,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 65,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     }
+    ]
+   }
+  },
+  "lexicon": {
+   "left_in_text": {
+    "changed": 0,
+    "moves": {},
+    "by_label_before": {
+     "negative": {
+      "perturbed": 672,
+      "changed": 0
+     },
+     "neutral": {
+      "perturbed": 6454,
+      "changed": 0
+     },
+     "positive": {
+      "perturbed": 6874,
+      "changed": 0
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     }
+    ]
+   },
+   "placeholder": {
+    "changed": 0,
+    "moves": {},
+    "by_label_before": {
+     "negative": {
+      "perturbed": 672,
+      "changed": 0
+     },
+     "neutral": {
+      "perturbed": 6454,
+      "changed": 0
+     },
+     "positive": {
+      "perturbed": 6874,
+      "changed": 0
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 0,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     }
+    ]
+   }
+  },
+  "xlmr_p3_full_weighted_s1": {
+   "left_in_text": {
+    "changed": 1064,
+    "moves": {
+     "negative>neutral": 99,
+     "negative>positive": 234,
+     "neutral>negative": 68,
+     "neutral>positive": 590,
+     "positive>negative": 17,
+     "positive>neutral": 56
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2464,
+      "changed": 333
+     },
+     "neutral": {
+      "perturbed": 1638,
+      "changed": 658
+     },
+     "positive": {
+      "perturbed": 9898,
+      "changed": 73
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 141,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 148,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 159,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 133,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 158,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 162,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 163,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     }
+    ]
+   },
+   "placeholder": {
+    "changed": 933,
+    "moves": {
+     "negative>neutral": 75,
+     "negative>positive": 92,
+     "neutral>negative": 81,
+     "neutral>positive": 519,
+     "positive>negative": 64,
+     "positive>neutral": 102
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2464,
+      "changed": 167
+     },
+     "neutral": {
+      "perturbed": 1638,
+      "changed": 600
+     },
+     "positive": {
+      "perturbed": 9898,
+      "changed": 166
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 160,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 126,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 126,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 126,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 123,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 136,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 136,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     }
+    ]
+   }
+  },
+  "xlmr_p3_full_s2": {
+   "left_in_text": {
+    "changed": 589,
+    "moves": {
+     "negative>neutral": 8,
+     "negative>positive": 368,
+     "neutral>negative": 14,
+     "neutral>positive": 108,
+     "positive>negative": 79,
+     "positive>neutral": 12
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2016,
+      "changed": 376
+     },
+     "neutral": {
+      "perturbed": 238,
+      "changed": 122
+     },
+     "positive": {
+      "perturbed": 11746,
+      "changed": 91
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 81,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 92,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 84,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 71,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 91,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 82,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 88,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     }
+    ]
+   },
+   "placeholder": {
+    "changed": 513,
+    "moves": {
+     "negative>positive": 77,
+     "neutral>negative": 56,
+     "neutral>positive": 81,
+     "positive>negative": 287,
+     "positive>neutral": 12
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2016,
+      "changed": 77
+     },
+     "neutral": {
+      "perturbed": 238,
+      "changed": 137
+     },
+     "positive": {
+      "perturbed": 11746,
+      "changed": 299
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 78,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 66,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 66,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 66,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 85,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 76,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 76,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     }
+    ]
+   }
+  },
+  "xlmr_p3_full_weighted_s2": {
+   "left_in_text": {
+    "changed": 1143,
+    "moves": {
+     "negative>neutral": 268,
+     "negative>positive": 217,
+     "neutral>negative": 65,
+     "neutral>positive": 484,
+     "positive>negative": 37,
+     "positive>neutral": 72
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2422,
+      "changed": 485
+     },
+     "neutral": {
+      "perturbed": 1428,
+      "changed": 549
+     },
+     "positive": {
+      "perturbed": 10150,
+      "changed": 109
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 140,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 183,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 186,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 166,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 165,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 160,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 143,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     }
+    ]
+   },
+   "placeholder": {
+    "changed": 1178,
+    "moves": {
+     "negative>neutral": 10,
+     "negative>positive": 113,
+     "neutral>negative": 333,
+     "neutral>positive": 444,
+     "positive>negative": 207,
+     "positive>neutral": 71
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2422,
+      "changed": 123
+     },
+     "neutral": {
+      "perturbed": 1428,
+      "changed": 777
+     },
+     "positive": {
+      "perturbed": 10150,
+      "changed": 278
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 194,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 164,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 164,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 164,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 154,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 169,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 169,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     }
+    ]
+   }
+  },
+  "xlmr_p3_full_s3": {
+   "left_in_text": {
+    "changed": 632,
+    "moves": {
+     "negative>neutral": 30,
+     "negative>positive": 429,
+     "neutral>negative": 1,
+     "neutral>positive": 132,
+     "positive>negative": 37,
+     "positive>neutral": 3
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 1974,
+      "changed": 459
+     },
+     "neutral": {
+      "perturbed": 210,
+      "changed": 133
+     },
+     "positive": {
+      "perturbed": 11816,
+      "changed": 40
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 60,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 76,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 133,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 75,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 74,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 120,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 94,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     }
+    ]
+   },
+   "placeholder": {
+    "changed": 465,
+    "moves": {
+     "negative>neutral": 12,
+     "negative>positive": 185,
+     "neutral>negative": 16,
+     "neutral>positive": 102,
+     "positive>negative": 143,
+     "positive>neutral": 7
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 1974,
+      "changed": 197
+     },
+     "neutral": {
+      "perturbed": 210,
+      "changed": 118
+     },
+     "positive": {
+      "perturbed": 11816,
+      "changed": 150
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 83,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 64,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 64,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 64,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 66,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 62,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 62,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     }
+    ]
+   }
+  },
+  "xlmr_p3_full_weighted_s3": {
+   "left_in_text": {
+    "changed": 997,
+    "moves": {
+     "negative>neutral": 74,
+     "negative>positive": 214,
+     "neutral>negative": 109,
+     "neutral>positive": 365,
+     "positive>negative": 160,
+     "positive>neutral": 75
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2940,
+      "changed": 288
+     },
+     "neutral": {
+      "perturbed": 1176,
+      "changed": 474
+     },
+     "positive": {
+      "perturbed": 9884,
+      "changed": 235
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 137,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 132,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 154,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 126,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 149,
+      "perturbed": 2000,
+      "label_alone": "positive"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 150,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 149,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     }
+    ]
+   },
+   "placeholder": {
+    "changed": 1061,
+    "moves": {
+     "negative>neutral": 132,
+     "negative>positive": 147,
+     "neutral>negative": 137,
+     "neutral>positive": 350,
+     "positive>negative": 171,
+     "positive>neutral": 124
+    },
+    "by_label_before": {
+     "negative": {
+      "perturbed": 2940,
+      "changed": 279
+     },
+     "neutral": {
+      "perturbed": 1176,
+      "changed": 487
+     },
+     "positive": {
+      "perturbed": 9884,
+      "changed": 295
+     }
+    },
+    "by_format": [
+     {
+      "kind": "handle",
+      "identifier": "@test_user01",
+      "changed": 169,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+7 700 123 45 67",
+      "changed": 141,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "8 (700) 123-45-67",
+      "changed": 141,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "phone",
+      "identifier": "+77001234567",
+      "changed": 141,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "email",
+      "identifier": "test.user@example.com",
+      "changed": 141,
+      "perturbed": 2000,
+      "label_alone": "negative"
+     },
+     {
+      "kind": "url",
+      "identifier": "https://example.org/profile/123",
+      "changed": 164,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     },
+     {
+      "kind": "url",
+      "identifier": "www.example.org/profile",
+      "changed": 164,
+      "perturbed": 2000,
+      "label_alone": "neutral"
+     }
+    ]
+   }
+  }
+ },
+ "controls": {
+  "linear": {
+   "changed": 385,
+   "moves": {
+    "negative>positive": 24,
+    "neutral>negative": 148,
+    "neutral>positive": 133,
+    "positive>negative": 77,
+    "positive>neutral": 3
+   },
+   "by_label_before": {
+    "negative": {
+     "perturbed": 1260,
+     "changed": 24
+    },
+    "neutral": {
+     "perturbed": 714,
+     "changed": 281
+    },
+    "positive": {
+     "perturbed": 4026,
+     "changed": 80
+    }
+   },
+   "by_format": [
+    {
+     "kind": "word",
+     "identifier": "менің",
+     "changed": 121,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    },
+    {
+     "kind": "word",
+     "identifier": "бұл",
+     "changed": 133,
+     "perturbed": 2000,
+     "label_alone": "negative"
+    },
+    {
+     "kind": "word",
+     "identifier": "тартып",
+     "changed": 131,
+     "perturbed": 2000,
+     "label_alone": "negative"
+    }
+   ],
+   "words": [
+    {
+     "word": "менің",
+     "reviews": 2039,
+     "divergence": 0.00028,
+     "class_shares": [
+      0.177,
+      0.037,
+      0.786
+     ]
+    },
+    {
+     "word": "бұл",
+     "reviews": 7585,
+     "divergence": 0.0004,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    },
+    {
+     "word": "тартып",
+     "reviews": 1170,
+     "divergence": 0.00041,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    }
+   ],
+   "perturbed": 6000
+  },
+  "lexicon": {
+   "changed": 0,
+   "moves": {},
+   "by_label_before": {
+    "negative": {
+     "perturbed": 288,
+     "changed": 0
+    },
+    "neutral": {
+     "perturbed": 2766,
+     "changed": 0
+    },
+    "positive": {
+     "perturbed": 2946,
+     "changed": 0
+    }
+   },
+   "by_format": [
+    {
+     "kind": "word",
+     "identifier": "менің",
+     "changed": 0,
+     "perturbed": 2000,
+     "label_alone": "neutral"
+    },
+    {
+     "kind": "word",
+     "identifier": "бұл",
+     "changed": 0,
+     "perturbed": 2000,
+     "label_alone": "neutral"
+    },
+    {
+     "kind": "word",
+     "identifier": "тартып",
+     "changed": 0,
+     "perturbed": 2000,
+     "label_alone": "neutral"
+    }
+   ],
+   "words": [
+    {
+     "word": "менің",
+     "reviews": 2039,
+     "divergence": 0.00028,
+     "class_shares": [
+      0.177,
+      0.037,
+      0.786
+     ]
+    },
+    {
+     "word": "бұл",
+     "reviews": 7585,
+     "divergence": 0.0004,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    },
+    {
+     "word": "тартып",
+     "reviews": 1170,
+     "divergence": 0.00041,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    }
+   ],
+   "perturbed": 6000
+  },
+  "xlmr_p3_full_s1": {
+   "changed": 224,
+   "moves": {
+    "negative>positive": 37,
+    "neutral>negative": 22,
+    "neutral>positive": 19,
+    "positive>negative": 135,
+    "positive>neutral": 11
+   },
+   "by_label_before": {
+    "negative": {
+     "perturbed": 900,
+     "changed": 37
+    },
+    "neutral": {
+     "perturbed": 96,
+     "changed": 41
+    },
+    "positive": {
+     "perturbed": 5004,
+     "changed": 146
+    }
+   },
+   "by_format": [
+    {
+     "kind": "word",
+     "identifier": "менің",
+     "changed": 54,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    },
+    {
+     "kind": "word",
+     "identifier": "бұл",
+     "changed": 120,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    },
+    {
+     "kind": "word",
+     "identifier": "тартып",
+     "changed": 50,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    }
+   ],
+   "words": [
+    {
+     "word": "менің",
+     "reviews": 2039,
+     "divergence": 0.00028,
+     "class_shares": [
+      0.177,
+      0.037,
+      0.786
+     ]
+    },
+    {
+     "word": "бұл",
+     "reviews": 7585,
+     "divergence": 0.0004,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    },
+    {
+     "word": "тартып",
+     "reviews": 1170,
+     "divergence": 0.00041,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    }
+   ],
+   "perturbed": 6000
+  },
+  "xlmr_p3_full_weighted_s1": {
+   "changed": 340,
+   "moves": {
+    "negative>neutral": 9,
+    "negative>positive": 44,
+    "neutral>negative": 66,
+    "neutral>positive": 179,
+    "positive>negative": 29,
+    "positive>neutral": 13
+   },
+   "by_label_before": {
+    "negative": {
+     "perturbed": 1056,
+     "changed": 53
+    },
+    "neutral": {
+     "perturbed": 702,
+     "changed": 245
+    },
+    "positive": {
+     "perturbed": 4242,
+     "changed": 42
+    }
+   },
+   "by_format": [
+    {
+     "kind": "word",
+     "identifier": "менің",
+     "changed": 111,
+     "perturbed": 2000,
+     "label_alone": "neutral"
+    },
+    {
+     "kind": "word",
+     "identifier": "бұл",
+     "changed": 124,
+     "perturbed": 2000,
+     "label_alone": "negative"
+    },
+    {
+     "kind": "word",
+     "identifier": "тартып",
+     "changed": 105,
+     "perturbed": 2000,
+     "label_alone": "neutral"
+    }
+   ],
+   "words": [
+    {
+     "word": "менің",
+     "reviews": 2039,
+     "divergence": 0.00028,
+     "class_shares": [
+      0.177,
+      0.037,
+      0.786
+     ]
+    },
+    {
+     "word": "бұл",
+     "reviews": 7585,
+     "divergence": 0.0004,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    },
+    {
+     "word": "тартып",
+     "reviews": 1170,
+     "divergence": 0.00041,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    }
+   ],
+   "perturbed": 6000
+  },
+  "xlmr_p3_full_s2": {
+   "changed": 239,
+   "moves": {
+    "negative>positive": 59,
+    "neutral>negative": 28,
+    "neutral>positive": 19,
+    "positive>negative": 116,
+    "positive>neutral": 17
+   },
+   "by_label_before": {
+    "negative": {
+     "perturbed": 864,
+     "changed": 59
+    },
+    "neutral": {
+     "perturbed": 102,
+     "changed": 47
+    },
+    "positive": {
+     "perturbed": 5034,
+     "changed": 133
+    }
+   },
+   "by_format": [
+    {
+     "kind": "word",
+     "identifier": "менің",
+     "changed": 71,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    },
+    {
+     "kind": "word",
+     "identifier": "бұл",
+     "changed": 101,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    },
+    {
+     "kind": "word",
+     "identifier": "тартып",
+     "changed": 67,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    }
+   ],
+   "words": [
+    {
+     "word": "менің",
+     "reviews": 2039,
+     "divergence": 0.00028,
+     "class_shares": [
+      0.177,
+      0.037,
+      0.786
+     ]
+    },
+    {
+     "word": "бұл",
+     "reviews": 7585,
+     "divergence": 0.0004,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    },
+    {
+     "word": "тартып",
+     "reviews": 1170,
+     "divergence": 0.00041,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    }
+   ],
+   "perturbed": 6000
+  },
+  "xlmr_p3_full_weighted_s2": {
+   "changed": 454,
+   "moves": {
+    "negative>neutral": 2,
+    "negative>positive": 44,
+    "neutral>negative": 143,
+    "neutral>positive": 175,
+    "positive>negative": 74,
+    "positive>neutral": 16
+   },
+   "by_label_before": {
+    "negative": {
+     "perturbed": 1038,
+     "changed": 46
+    },
+    "neutral": {
+     "perturbed": 612,
+     "changed": 318
+    },
+    "positive": {
+     "perturbed": 4350,
+     "changed": 90
+    }
+   },
+   "by_format": [
+    {
+     "kind": "word",
+     "identifier": "менің",
+     "changed": 133,
+     "perturbed": 2000,
+     "label_alone": "neutral"
+    },
+    {
+     "kind": "word",
+     "identifier": "бұл",
+     "changed": 163,
+     "perturbed": 2000,
+     "label_alone": "negative"
+    },
+    {
+     "kind": "word",
+     "identifier": "тартып",
+     "changed": 158,
+     "perturbed": 2000,
+     "label_alone": "neutral"
+    }
+   ],
+   "words": [
+    {
+     "word": "менің",
+     "reviews": 2039,
+     "divergence": 0.00028,
+     "class_shares": [
+      0.177,
+      0.037,
+      0.786
+     ]
+    },
+    {
+     "word": "бұл",
+     "reviews": 7585,
+     "divergence": 0.0004,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    },
+    {
+     "word": "тартып",
+     "reviews": 1170,
+     "divergence": 0.00041,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    }
+   ],
+   "perturbed": 6000
+  },
+  "xlmr_p3_full_s3": {
+   "changed": 204,
+   "moves": {
+    "negative>neutral": 2,
+    "negative>positive": 52,
+    "neutral>negative": 13,
+    "neutral>positive": 33,
+    "positive>negative": 103,
+    "positive>neutral": 1
+   },
+   "by_label_before": {
+    "negative": {
+     "perturbed": 846,
+     "changed": 54
+    },
+    "neutral": {
+     "perturbed": 90,
+     "changed": 46
+    },
+    "positive": {
+     "perturbed": 5064,
+     "changed": 104
+    }
+   },
+   "by_format": [
+    {
+     "kind": "word",
+     "identifier": "менің",
+     "changed": 69,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    },
+    {
+     "kind": "word",
+     "identifier": "бұл",
+     "changed": 78,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    },
+    {
+     "kind": "word",
+     "identifier": "тартып",
+     "changed": 57,
+     "perturbed": 2000,
+     "label_alone": "positive"
+    }
+   ],
+   "words": [
+    {
+     "word": "менің",
+     "reviews": 2039,
+     "divergence": 0.00028,
+     "class_shares": [
+      0.177,
+      0.037,
+      0.786
+     ]
+    },
+    {
+     "word": "бұл",
+     "reviews": 7585,
+     "divergence": 0.0004,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    },
+    {
+     "word": "тартып",
+     "reviews": 1170,
+     "divergence": 0.00041,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    }
+   ],
+   "perturbed": 6000
+  },
+  "xlmr_p3_full_weighted_s3": {
+   "changed": 481,
+   "moves": {
+    "negative>neutral": 10,
+    "negative>positive": 61,
+    "neutral>negative": 123,
+    "neutral>positive": 133,
+    "positive>negative": 136,
+    "positive>neutral": 18
+   },
+   "by_label_before": {
+    "negative": {
+     "perturbed": 1260,
+     "changed": 71
+    },
+    "neutral": {
+     "perturbed": 504,
+     "changed": 256
+    },
+    "positive": {
+     "perturbed": 4236,
+     "changed": 154
+    }
+   },
+   "by_format": [
+    {
+     "kind": "word",
+     "identifier": "менің",
+     "changed": 138,
+     "perturbed": 2000,
+     "label_alone": "negative"
+    },
+    {
+     "kind": "word",
+     "identifier": "бұл",
+     "changed": 155,
+     "perturbed": 2000,
+     "label_alone": "negative"
+    },
+    {
+     "kind": "word",
+     "identifier": "тартып",
+     "changed": 188,
+     "perturbed": 2000,
+     "label_alone": "negative"
+    }
+   ],
+   "words": [
+    {
+     "word": "менің",
+     "reviews": 2039,
+     "divergence": 0.00028,
+     "class_shares": [
+      0.177,
+      0.037,
+      0.786
+     ]
+    },
+    {
+     "word": "бұл",
+     "reviews": 7585,
+     "divergence": 0.0004,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    },
+    {
+     "word": "тартып",
+     "reviews": 1170,
+     "divergence": 0.00041,
+     "class_shares": [
+      0.165,
+      0.037,
+      0.798
+     ]
+    }
+   ],
+   "perturbed": 6000
+  }
+ }
+}

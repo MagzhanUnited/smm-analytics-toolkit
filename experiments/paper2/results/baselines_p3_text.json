@@ -1,0 +1,2505 @@
+{
+ "task": "p3",
+ "text_col": "text",
+ "labels": [
+  "negative",
+  "neutral",
+  "positive"
+ ],
+ "sizes": {
+  "train": 140126,
+  "valid": 17516,
+  "test": 17516
+ },
+ "class_counts": {
+  "train": [
+   23951,
+   5758,
+   110417
+  ],
+  "valid": [
+   2994,
+   719,
+   13803
+  ],
+  "test": [
+   2994,
+   720,
+   13802
+  ]
+ },
+ "environment": {
+  "python": "3.12.14",
+  "machine": "Darwin arm64",
+  "numpy": "2.5.5",
+  "pandas": "3.1.1",
+  "sklearn": "1.9.1",
+  "torch": "2.15.0",
+  "transformers": "5.24.1"
+ },
+ "models": {
+  "majority": {
+   "label": "positive",
+   "test": {
+    "accuracy": 0.788,
+    "macro_precision": 0.2627,
+    "macro_recall": 0.3333,
+    "macro_f1": 0.2938,
+    "n": 17516,
+    "per_class": {
+     "negative": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2994
+     },
+     "neutral": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 720
+     },
+     "positive": {
+      "precision": 0.788,
+      "recall": 1.0,
+      "f1": 0.8814,
+      "support": 13802
+     }
+    },
+    "confusion": [
+     [
+      0,
+      0,
+      2994
+     ],
+     [
+      0,
+      0,
+      720
+     ],
+     [
+      0,
+      0,
+      13802
+     ]
+    ]
+   }
+  },
+  "lexicon": {
+   "test": {
+    "accuracy": 0.5255,
+    "macro_precision": 0.578,
+    "macro_recall": 0.4734,
+    "macro_f1": 0.3718,
+    "n": 17516,
+    "per_class": {
+     "negative": {
+      "precision": 0.745,
+      "recall": 0.1737,
+      "f1": 0.2817,
+      "support": 2994
+     },
+     "neutral": {
+      "precision": 0.0587,
+      "recall": 0.6514,
+      "f1": 0.1077,
+      "support": 720
+     },
+     "positive": {
+      "precision": 0.9303,
+      "recall": 0.5953,
+      "f1": 0.726,
+      "support": 13802
+     }
+    },
+    "confusion": [
+     [
+      520,
+      2073,
+      401
+     ],
+     [
+      36,
+      469,
+      215
+     ],
+     [
+      142,
+      5444,
+      8216
+     ]
+    ]
+   },
+   "bootstrap": {
+    "resamples": 2000,
+    "seed": 20261126,
+    "accuracy_ci95": [
+     0.518,
+     0.5327
+    ],
+    "macro_f1_ci95": [
+     0.3641,
+     0.3798
+    ]
+   },
+   "subgroups": {
+    "domain": {
+     "appstore": {
+      "n": 13257,
+      "accuracy": 0.4732,
+      "macro_f1": 0.3569
+     },
+     "bookstore": {
+      "n": 500,
+      "accuracy": 0.426,
+      "macro_f1": 0.2838
+     },
+     "mapping": {
+      "n": 849,
+      "accuracy": 0.5194,
+      "macro_f1": 0.3506
+     },
+     "market": {
+      "n": 2910,
+      "accuracy": 0.7828,
+      "macro_f1": 0.4528
+     }
+    },
+    "script": {
+     "cyrillic_without_kazakh_letters": {
+      "n": 3088,
+      "accuracy": 0.33,
+      "macro_f1": 0.2891
+     },
+     "kazakh_letters": {
+      "n": 14156,
+      "accuracy": 0.5757,
+      "macro_f1": 0.3907
+     },
+     "latin": {
+      "n": 257,
+      "accuracy": 0.1323,
+      "macro_f1": 0.0984
+     },
+     "no_letters": {
+      "n": 15,
+      "accuracy": 0.2,
+      "macro_f1": 0.1439
+     }
+    },
+    "overlap": {
+     "text_also_in_train": {
+      "n": 624,
+      "accuracy": 0.351,
+      "macro_f1": 0.271
+     },
+     "unseen_text": {
+      "n": 16892,
+      "accuracy": 0.532,
+      "macro_f1": 0.3765
+     }
+    }
+   },
+   "privacy": {
+    "texts": 1000,
+    "perturbed": 14000,
+    "identifier_formats": 7,
+    "leaks_after_scrubbing": 0,
+    "label_changes": {
+     "left_in_text": 0,
+     "placeholder": 0,
+     "removed": 0
+    },
+    "label_changes_by_kind": {
+     "left_in_text": {
+      "email": 0,
+      "handle": 0,
+      "phone": 0,
+      "url": 0
+     },
+     "placeholder": {
+      "email": 0,
+      "handle": 0,
+      "phone": 0,
+      "url": 0
+     },
+     "removed": {
+      "email": 0,
+      "handle": 0,
+      "phone": 0,
+      "url": 0
+     }
+    },
+    "original_texts_relabelled": {
+     "left_in_text": 0,
+     "placeholder": 0,
+     "removed": 0
+    },
+    "perturbed_by_kind": {
+     "email": 2000,
+     "handle": 2000,
+     "phone": 6000,
+     "url": 4000
+    }
+   },
+   "throughput_cpu": {
+    "texts": 17516,
+    "seconds": 0.07,
+    "texts_per_second": 251359.8
+   },
+   "suite": {
+    "n": 239,
+    "passed": 188,
+    "pass_rate": 0.7866,
+    "capabilities": [
+     {
+      "key": "V-RU",
+      "language": "ru",
+      "n": 48,
+      "passed": 48
+     },
+     {
+      "key": "V-KK",
+      "language": "kk",
+      "n": 22,
+      "passed": 22
+     },
+     {
+      "key": "N1-RU",
+      "language": "ru",
+      "n": 30,
+      "passed": 30
+     },
+     {
+      "key": "N2-RU",
+      "language": "ru",
+      "n": 18,
+      "passed": 18
+     },
+     {
+      "key": "N3-RU",
+      "language": "ru",
+      "n": 15,
+      "passed": 15
+     },
+     {
+      "key": "N4-RU",
+      "language": "ru",
+      "n": 29,
+      "passed": 0
+     },
+     {
+      "key": "N5-RU",
+      "language": "ru",
+      "n": 10,
+      "passed": 0
+     },
+     {
+      "key": "N1-KK",
+      "language": "kk",
+      "n": 10,
+      "passed": 10
+     },
+     {
+      "key": "N2-KK",
+      "language": "kk",
+      "n": 8,
+      "passed": 8
+     },
+     {
+      "key": "N3-KK",
+      "language": "kk",
+      "n": 6,
+      "passed": 6
+     },
+     {
+      "key": "N4-KK",
+      "language": "kk",
+      "n": 14,
+      "passed": 2
+     },
+     {
+      "key": "CS",
+      "language": "ru+kk",
+      "n": 13,
+      "passed": 13
+     },
+     {
+      "key": "MIX",
+      "language": "any",
+      "n": 8,
+      "passed": 8
+     },
+     {
+      "key": "EMO",
+      "language": "any",
+      "n": 8,
+      "passed": 8
+     }
+    ],
+    "predictions": [
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative"
+    ]
+   },
+   "decided_share": 0.5441
+  },
+  "linear": {
+   "test": {
+    "accuracy": 0.7565,
+    "macro_precision": 0.531,
+    "macro_recall": 0.6032,
+    "macro_f1": 0.5454,
+    "n": 17516,
+    "per_class": {
+     "negative": {
+      "precision": 0.534,
+      "recall": 0.6663,
+      "f1": 0.5929,
+      "support": 2994
+     },
+     "neutral": {
+      "precision": 0.1241,
+      "recall": 0.3458,
+      "f1": 0.1827,
+      "support": 720
+     },
+     "positive": {
+      "precision": 0.9348,
+      "recall": 0.7974,
+      "f1": 0.8607,
+      "support": 13802
+     }
+    },
+    "confusion": [
+     [
+      1995,
+      431,
+      568
+     ],
+     [
+      271,
+      249,
+      200
+     ],
+     [
+      1470,
+      1326,
+      11006
+     ]
+    ]
+   },
+   "bootstrap": {
+    "resamples": 2000,
+    "seed": 20261126,
+    "accuracy_ci95": [
+     0.7498,
+     0.7628
+    ],
+    "macro_f1_ci95": [
+     0.5368,
+     0.5545
+    ]
+   },
+   "subgroups": {
+    "domain": {
+     "appstore": {
+      "n": 13257,
+      "accuracy": 0.7252,
+      "macro_f1": 0.5336
+     },
+     "bookstore": {
+      "n": 500,
+      "accuracy": 0.704,
+      "macro_f1": 0.4855
+     },
+     "mapping": {
+      "n": 849,
+      "accuracy": 0.8422,
+      "macro_f1": 0.6164
+     },
+     "market": {
+      "n": 2910,
+      "accuracy": 0.8828,
+      "macro_f1": 0.5783
+     }
+    },
+    "script": {
+     "cyrillic_without_kazakh_letters": {
+      "n": 3088,
+      "accuracy": 0.6937,
+      "macro_f1": 0.5053
+     },
+     "kazakh_letters": {
+      "n": 14156,
+      "accuracy": 0.7713,
+      "macro_f1": 0.5565
+     },
+     "latin": {
+      "n": 257,
+      "accuracy": 0.7082,
+      "macro_f1": 0.4016
+     },
+     "no_letters": {
+      "n": 15,
+      "accuracy": 0.4667,
+      "macro_f1": 0.3185
+     }
+    },
+    "overlap": {
+     "text_also_in_train": {
+      "n": 624,
+      "accuracy": 0.4439,
+      "macro_f1": 0.3441
+     },
+     "unseen_text": {
+      "n": 16892,
+      "accuracy": 0.768,
+      "macro_f1": 0.5544
+     }
+    }
+   },
+   "privacy": {
+    "texts": 1000,
+    "perturbed": 14000,
+    "identifier_formats": 7,
+    "leaks_after_scrubbing": 0,
+    "label_changes": {
+     "left_in_text": 2444,
+     "placeholder": 919,
+     "removed": 0
+    },
+    "label_changes_by_kind": {
+     "left_in_text": {
+      "email": 126,
+      "handle": 97,
+      "phone": 1229,
+      "url": 992
+     },
+     "placeholder": {
+      "email": 95,
+      "handle": 152,
+      "phone": 360,
+      "url": 312
+     },
+     "removed": {
+      "email": 0,
+      "handle": 0,
+      "phone": 0,
+      "url": 0
+     }
+    },
+    "original_texts_relabelled": {
+     "left_in_text": 0,
+     "placeholder": 0,
+     "removed": 0
+    },
+    "perturbed_by_kind": {
+     "email": 2000,
+     "handle": 2000,
+     "phone": 6000,
+     "url": 4000
+    }
+   },
+   "throughput_cpu": {
+    "texts": 17516,
+    "seconds": 0.855,
+    "texts_per_second": 20481.3
+   },
+   "suite": {
+    "n": 239,
+    "passed": 133,
+    "pass_rate": 0.5565,
+    "capabilities": [
+     {
+      "key": "V-RU",
+      "language": "ru",
+      "n": 48,
+      "passed": 32
+     },
+     {
+      "key": "V-KK",
+      "language": "kk",
+      "n": 22,
+      "passed": 22
+     },
+     {
+      "key": "N1-RU",
+      "language": "ru",
+      "n": 30,
+      "passed": 20
+     },
+     {
+      "key": "N2-RU",
+      "language": "ru",
+      "n": 18,
+      "passed": 0
+     },
+     {
+      "key": "N3-RU",
+      "language": "ru",
+      "n": 15,
+      "passed": 0
+     },
+     {
+      "key": "N4-RU",
+      "language": "ru",
+      "n": 29,
+      "passed": 19
+     },
+     {
+      "key": "N5-RU",
+      "language": "ru",
+      "n": 10,
+      "passed": 0
+     },
+     {
+      "key": "N1-KK",
+      "language": "kk",
+      "n": 10,
+      "passed": 4
+     },
+     {
+      "key": "N2-KK",
+      "language": "kk",
+      "n": 8,
+      "passed": 0
+     },
+     {
+      "key": "N3-KK",
+      "language": "kk",
+      "n": 6,
+      "passed": 0
+     },
+     {
+      "key": "N4-KK",
+      "language": "kk",
+      "n": 14,
+      "passed": 11
+     },
+     {
+      "key": "CS",
+      "language": "ru+kk",
+      "n": 13,
+      "passed": 13
+     },
+     {
+      "key": "MIX",
+      "language": "any",
+      "n": 8,
+      "passed": 6
+     },
+     {
+      "key": "EMO",
+      "language": "any",
+      "n": 8,
+      "passed": 6
+     }
+    ],
+    "predictions": [
+     "positive",
+     "neutral",
+     "neutral",
+     "negative",
+     "neutral",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "positive",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative"
+    ]
+   },
+   "fit": {
+    "selected": {
+     "C": 0.25,
+     "class_weight": "balanced",
+     "valid_macro_f1": 0.5527,
+     "fit_seconds": 26.89,
+     "iterations": 141
+    },
+    "trials": [
+     {
+      "C": 0.25,
+      "class_weight": "none",
+      "valid_macro_f1": 0.5142,
+      "fit_seconds": 13.02,
+      "iterations": 66
+     },
+     {
+      "C": 0.25,
+      "class_weight": "balanced",
+      "valid_macro_f1": 0.5527,
+      "fit_seconds": 26.89,
+      "iterations": 141
+     },
+     {
+      "C": 0.5,
+      "class_weight": "none",
+      "valid_macro_f1": 0.5212,
+      "fit_seconds": 20.99,
+      "iterations": 107
+     },
+     {
+      "C": 0.5,
+      "class_weight": "balanced",
+      "valid_macro_f1": 0.552,
+      "fit_seconds": 28.75,
+      "iterations": 145
+     },
+     {
+      "C": 1.0,
+      "class_weight": "none",
+      "valid_macro_f1": 0.5282,
+      "fit_seconds": 25.76,
+      "iterations": 136
+     },
+     {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "valid_macro_f1": 0.548,
+      "fit_seconds": 36.97,
+      "iterations": 186
+     },
+     {
+      "C": 4.0,
+      "class_weight": "none",
+      "valid_macro_f1": 0.5314,
+      "fit_seconds": 44.51,
+      "iterations": 226
+     },
+     {
+      "C": 4.0,
+      "class_weight": "balanced",
+      "valid_macro_f1": 0.5324,
+      "fit_seconds": 33.37,
+      "iterations": 172
+     },
+     {
+      "C": 16.0,
+      "class_weight": "none",
+      "valid_macro_f1": 0.5214,
+      "fit_seconds": 45.64,
+      "iterations": 241
+     },
+     {
+      "C": 16.0,
+      "class_weight": "balanced",
+      "valid_macro_f1": 0.5126,
+      "fit_seconds": 54.25,
+      "iterations": 287
+     }
+    ],
+    "vectoriser_seconds": 8.45,
+    "features": 399706,
+    "grid_seconds": 339.75,
+    "train_seconds": 35.34,
+    "model_megabytes": 20.4,
+    "top_word_features": {
+     "negative": [
+      "👎",
+      "өте нашар",
+      "өте жаман",
+      "😡",
+      "бір жұлдыз",
+      "дым",
+      "1 жұлдыз",
+      "қате",
+      "нашар",
+      "өте төмен",
+      "өте қымбат",
+      "ұнамады",
+      "жаман",
+      "1",
+      "🤬",
+      "😠",
+      "керек емес",
+      "малдар",
+      "оте нашар",
+      "алмай"
+     ],
+     "neutral": [
+      "3 жұлдыз",
+      "3",
+      "үш",
+      "үш жұлдыз",
+      "керемет өте",
+      "3жұлдыз",
+      "жақсы программа",
+      "рахмет сіздерге",
+      "тамаша рахмет",
+      "орташа",
+      "маған бұл",
+      "неге менің",
+      "не оиын",
+      "арасында",
+      "маган каты",
+      "екен ғой",
+      "ойнайық",
+      "онлайын",
+      ", бізге",
+      "маған онша"
+     ],
+     "positive": [
+      "керемет",
+      "ұнады ,",
+      "жаман емес",
+      ", жақсы",
+      "өте жақсы",
+      "ұнады .",
+      "өте ыңғайлы",
+      "ыңғайлы",
+      "❤",
+      "керемет ,",
+      "супер",
+      "керемет мен",
+      "👍",
+      ". жақсы",
+      "🥰",
+      "4",
+      "керемет .",
+      "өте",
+      "5",
+      "жақсы жұмыс"
+     ]
+    }
+   }
+  }
+ },
+ "lexicon_ablation": {
+  "full": {
+   "accuracy": 0.5255,
+   "macro_f1": 0.3718,
+   "correct": 9205
+  },
+  "no_pre_negation": {
+   "accuracy": 0.5254,
+   "macro_f1": 0.3715,
+   "correct": 9203
+  },
+  "no_post_negation": {
+   "accuracy": 0.5238,
+   "macro_f1": 0.3707,
+   "correct": 9175
+  },
+  "no_negation": {
+   "accuracy": 0.5237,
+   "macro_f1": 0.3704,
+   "correct": 9173
+  }
+ },
+ "linear_by_weighting": {
+  "none": {
+   "selected": {
+    "C": 4.0,
+    "class_weight": "none",
+    "valid_macro_f1": 0.5314,
+    "fit_seconds": 44.51,
+    "iterations": 226
+   },
+   "test": {
+    "accuracy": 0.8388,
+    "macro_precision": 0.589,
+    "macro_recall": 0.5074,
+    "macro_f1": 0.522,
+    "n": 17516,
+    "per_class": {
+     "negative": {
+      "precision": 0.6427,
+      "recall": 0.5324,
+      "f1": 0.5824,
+      "support": 2994
+     },
+     "neutral": {
+      "precision": 0.248,
+      "recall": 0.0431,
+      "f1": 0.0734,
+      "support": 720
+     },
+     "positive": {
+      "precision": 0.8764,
+      "recall": 0.9468,
+      "f1": 0.9102,
+      "support": 13802
+     }
+    },
+    "confusion": [
+     [
+      1594,
+      39,
+      1361
+     ],
+     [
+      207,
+      31,
+      482
+     ],
+     [
+      679,
+      55,
+      13068
+     ]
+    ]
+   },
+   "bootstrap": {
+    "resamples": 2000,
+    "seed": 20261126,
+    "accuracy_ci95": [
+     0.8331,
+     0.8446
+    ],
+    "macro_f1_ci95": [
+     0.5117,
+     0.5329
+    ]
+   }
+  },
+  "balanced": {
+   "selected": {
+    "C": 0.25,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5527,
+    "fit_seconds": 26.89,
+    "iterations": 141
+   },
+   "test": {
+    "accuracy": 0.7565,
+    "macro_precision": 0.531,
+    "macro_recall": 0.6032,
+    "macro_f1": 0.5454,
+    "n": 17516,
+    "per_class": {
+     "negative": {
+      "precision": 0.534,
+      "recall": 0.6663,
+      "f1": 0.5929,
+      "support": 2994
+     },
+     "neutral": {
+      "precision": 0.1241,
+      "recall": 0.3458,
+      "f1": 0.1827,
+      "support": 720
+     },
+     "positive": {
+      "precision": 0.9348,
+      "recall": 0.7974,
+      "f1": 0.8607,
+      "support": 13802
+     }
+    },
+    "confusion": [
+     [
+      1995,
+      431,
+      568
+     ],
+     [
+      271,
+      249,
+      200
+     ],
+     [
+      1470,
+      1326,
+      11006
+     ]
+    ]
+   },
+   "bootstrap": {
+    "resamples": 2000,
+    "seed": 20261126,
+    "accuracy_ci95": [
+     0.7498,
+     0.7628
+    ],
+    "macro_f1_ci95": [
+     0.5368,
+     0.5545
+    ]
+   }
+  }
+ },
+ "feature_ablation": {
+  "word": {
+   "test": {
+    "accuracy": 0.7641,
+    "macro_precision": 0.5238,
+    "macro_recall": 0.582,
+    "macro_f1": 0.5389,
+    "n": 17516,
+    "per_class": {
+     "negative": {
+      "precision": 0.5267,
+      "recall": 0.662,
+      "f1": 0.5867,
+      "support": 2994
+     },
+     "neutral": {
+      "precision": 0.1178,
+      "recall": 0.2722,
+      "f1": 0.1644,
+      "support": 720
+     },
+     "positive": {
+      "precision": 0.927,
+      "recall": 0.8119,
+      "f1": 0.8656,
+      "support": 13802
+     }
+    },
+    "confusion": [
+     [
+      1982,
+      365,
+      647
+     ],
+     [
+      288,
+      196,
+      236
+     ],
+     [
+      1493,
+      1103,
+      11206
+     ]
+    ]
+   },
+   "selected": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5426,
+    "fit_seconds": 4.52,
+    "iterations": 146
+   },
+   "features": 140630,
+   "subgroups": {
+    "domain": {
+     "appstore": {
+      "n": 13257,
+      "accuracy": 0.7321,
+      "macro_f1": 0.527
+     },
+     "bookstore": {
+      "n": 500,
+      "accuracy": 0.73,
+      "macro_f1": 0.5067
+     },
+     "mapping": {
+      "n": 849,
+      "accuracy": 0.8386,
+      "macro_f1": 0.5664
+     },
+     "market": {
+      "n": 2910,
+      "accuracy": 0.8942,
+      "macro_f1": 0.5867
+     }
+    },
+    "script": {
+     "cyrillic_without_kazakh_letters": {
+      "n": 3088,
+      "accuracy": 0.6946,
+      "macro_f1": 0.4941
+     },
+     "kazakh_letters": {
+      "n": 14156,
+      "accuracy": 0.7809,
+      "macro_f1": 0.5515
+     },
+     "latin": {
+      "n": 257,
+      "accuracy": 0.6809,
+      "macro_f1": 0.4057
+     },
+     "no_letters": {
+      "n": 15,
+      "accuracy": 0.6667,
+      "macro_f1": 0.4444
+     }
+    },
+    "overlap": {
+     "text_also_in_train": {
+      "n": 624,
+      "accuracy": 0.4375,
+      "macro_f1": 0.3373
+     },
+     "unseen_text": {
+      "n": 16892,
+      "accuracy": 0.7762,
+      "macro_f1": 0.5479
+     }
+    }
+   },
+   "suite": {
+    "n": 239,
+    "passed": 149,
+    "pass_rate": 0.6234,
+    "capabilities": [
+     {
+      "key": "V-RU",
+      "language": "ru",
+      "n": 48,
+      "passed": 36
+     },
+     {
+      "key": "V-KK",
+      "language": "kk",
+      "n": 22,
+      "passed": 21
+     },
+     {
+      "key": "N1-RU",
+      "language": "ru",
+      "n": 30,
+      "passed": 23
+     },
+     {
+      "key": "N2-RU",
+      "language": "ru",
+      "n": 18,
+      "passed": 0
+     },
+     {
+      "key": "N3-RU",
+      "language": "ru",
+      "n": 15,
+      "passed": 0
+     },
+     {
+      "key": "N4-RU",
+      "language": "ru",
+      "n": 29,
+      "passed": 22
+     },
+     {
+      "key": "N5-RU",
+      "language": "ru",
+      "n": 10,
+      "passed": 4
+     },
+     {
+      "key": "N1-KK",
+      "language": "kk",
+      "n": 10,
+      "passed": 5
+     },
+     {
+      "key": "N2-KK",
+      "language": "kk",
+      "n": 8,
+      "passed": 1
+     },
+     {
+      "key": "N3-KK",
+      "language": "kk",
+      "n": 6,
+      "passed": 0
+     },
+     {
+      "key": "N4-KK",
+      "language": "kk",
+      "n": 14,
+      "passed": 10
+     },
+     {
+      "key": "CS",
+      "language": "ru+kk",
+      "n": 13,
+      "passed": 13
+     },
+     {
+      "key": "MIX",
+      "language": "any",
+      "n": 8,
+      "passed": 7
+     },
+     {
+      "key": "EMO",
+      "language": "any",
+      "n": 8,
+      "passed": 7
+     }
+    ],
+    "predictions": [
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "neutral",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "neutral",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "neutral",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "positive",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative"
+    ]
+   }
+  },
+  "char": {
+   "test": {
+    "accuracy": 0.7278,
+    "macro_precision": 0.5253,
+    "macro_recall": 0.6079,
+    "macro_f1": 0.5331,
+    "n": 17516,
+    "per_class": {
+     "negative": {
+      "precision": 0.5235,
+      "recall": 0.652,
+      "f1": 0.5807,
+      "support": 2994
+     },
+     "neutral": {
+      "precision": 0.1138,
+      "recall": 0.4111,
+      "f1": 0.1783,
+      "support": 720
+     },
+     "positive": {
+      "precision": 0.9387,
+      "recall": 0.7608,
+      "f1": 0.8404,
+      "support": 13802
+     }
+    },
+    "confusion": [
+     [
+      1952,
+      530,
+      512
+     ],
+     [
+      250,
+      296,
+      174
+     ],
+     [
+      1527,
+      1775,
+      10500
+     ]
+    ]
+   },
+   "selected": {
+    "C": 0.25,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5382,
+    "fit_seconds": 13.28,
+    "iterations": 94
+   },
+   "features": 259076,
+   "subgroups": {
+    "domain": {
+     "appstore": {
+      "n": 13257,
+      "accuracy": 0.6965,
+      "macro_f1": 0.5226
+     },
+     "bookstore": {
+      "n": 500,
+      "accuracy": 0.68,
+      "macro_f1": 0.4795
+     },
+     "mapping": {
+      "n": 849,
+      "accuracy": 0.8186,
+      "macro_f1": 0.6023
+     },
+     "market": {
+      "n": 2910,
+      "accuracy": 0.8522,
+      "macro_f1": 0.5491
+     }
+    },
+    "script": {
+     "cyrillic_without_kazakh_letters": {
+      "n": 3088,
+      "accuracy": 0.6687,
+      "macro_f1": 0.4952
+     },
+     "kazakh_letters": {
+      "n": 14156,
+      "accuracy": 0.7416,
+      "macro_f1": 0.5434
+     },
+     "latin": {
+      "n": 257,
+      "accuracy": 0.6965,
+      "macro_f1": 0.4352
+     },
+     "no_letters": {
+      "n": 15,
+      "accuracy": 0.4,
+      "macro_f1": 0.2781
+     }
+    },
+    "overlap": {
+     "text_also_in_train": {
+      "n": 624,
+      "accuracy": 0.4808,
+      "macro_f1": 0.3761
+     },
+     "unseen_text": {
+      "n": 16892,
+      "accuracy": 0.7369,
+      "macro_f1": 0.5399
+     }
+    }
+   },
+   "suite": {
+    "n": 239,
+    "passed": 115,
+    "pass_rate": 0.4812,
+    "capabilities": [
+     {
+      "key": "V-RU",
+      "language": "ru",
+      "n": 48,
+      "passed": 28
+     },
+     {
+      "key": "V-KK",
+      "language": "kk",
+      "n": 22,
+      "passed": 21
+     },
+     {
+      "key": "N1-RU",
+      "language": "ru",
+      "n": 30,
+      "passed": 13
+     },
+     {
+      "key": "N2-RU",
+      "language": "ru",
+      "n": 18,
+      "passed": 3
+     },
+     {
+      "key": "N3-RU",
+      "language": "ru",
+      "n": 15,
+      "passed": 1
+     },
+     {
+      "key": "N4-RU",
+      "language": "ru",
+      "n": 29,
+      "passed": 11
+     },
+     {
+      "key": "N5-RU",
+      "language": "ru",
+      "n": 10,
+      "passed": 0
+     },
+     {
+      "key": "N1-KK",
+      "language": "kk",
+      "n": 10,
+      "passed": 6
+     },
+     {
+      "key": "N2-KK",
+      "language": "kk",
+      "n": 8,
+      "passed": 0
+     },
+     {
+      "key": "N3-KK",
+      "language": "kk",
+      "n": 6,
+      "passed": 0
+     },
+     {
+      "key": "N4-KK",
+      "language": "kk",
+      "n": 14,
+      "passed": 8
+     },
+     {
+      "key": "CS",
+      "language": "ru+kk",
+      "n": 13,
+      "passed": 12
+     },
+     {
+      "key": "MIX",
+      "language": "any",
+      "n": 8,
+      "passed": 6
+     },
+     {
+      "key": "EMO",
+      "language": "any",
+      "n": 8,
+      "passed": 6
+     }
+    ],
+    "predictions": [
+     "positive",
+     "neutral",
+     "neutral",
+     "negative",
+     "neutral",
+     "positive",
+     "positive",
+     "neutral",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "neutral",
+     "neutral",
+     "negative",
+     "neutral",
+     "positive",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "neutral",
+     "neutral",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "positive",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "neutral",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative",
+     "neutral",
+     "negative",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "positive",
+     "neutral",
+     "neutral",
+     "neutral",
+     "negative",
+     "negative",
+     "positive",
+     "positive",
+     "negative",
+     "negative",
+     "negative",
+     "negative"
+    ]
+   }
+  }
+ },
+ "curve": [
+  {
+   "size": 250,
+   "seed": 1,
+   "accuracy": 0.7256,
+   "macro_f1": 0.4108,
+   "selected": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.4286,
+    "fit_seconds": 0.01,
+    "iterations": 13
+   },
+   "features": 4676,
+   "grid_seconds": 0.22
+  },
+  {
+   "size": 250,
+   "seed": 2,
+   "accuracy": 0.7678,
+   "macro_f1": 0.4592,
+   "selected": {
+    "C": 0.25,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.4596,
+    "fit_seconds": 0.01,
+    "iterations": 9
+   },
+   "features": 5240,
+   "grid_seconds": 0.22
+  },
+  {
+   "size": 250,
+   "seed": 3,
+   "accuracy": 0.7494,
+   "macro_f1": 0.4596,
+   "selected": {
+    "C": 0.25,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.4667,
+    "fit_seconds": 0.01,
+    "iterations": 10
+   },
+   "features": 4374,
+   "grid_seconds": 0.2
+  },
+  {
+   "size": 1000,
+   "seed": 1,
+   "accuracy": 0.7821,
+   "macro_f1": 0.477,
+   "selected": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.4923,
+    "fit_seconds": 0.05,
+    "iterations": 23
+   },
+   "features": 14702,
+   "grid_seconds": 0.75
+  },
+  {
+   "size": 1000,
+   "seed": 2,
+   "accuracy": 0.7622,
+   "macro_f1": 0.4956,
+   "selected": {
+    "C": 0.25,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5102,
+    "fit_seconds": 0.04,
+    "iterations": 18
+   },
+   "features": 13835,
+   "grid_seconds": 0.68
+  },
+  {
+   "size": 1000,
+   "seed": 3,
+   "accuracy": 0.7877,
+   "macro_f1": 0.4809,
+   "selected": {
+    "C": 4.0,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5256,
+    "fit_seconds": 0.06,
+    "iterations": 28
+   },
+   "features": 14437,
+   "grid_seconds": 0.72
+  },
+  {
+   "size": 4000,
+   "seed": 1,
+   "accuracy": 0.7717,
+   "macro_f1": 0.5131,
+   "selected": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5253,
+    "fit_seconds": 0.23,
+    "iterations": 30
+   },
+   "features": 36057,
+   "grid_seconds": 3.31
+  },
+  {
+   "size": 4000,
+   "seed": 2,
+   "accuracy": 0.7765,
+   "macro_f1": 0.5122,
+   "selected": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5381,
+    "fit_seconds": 0.15,
+    "iterations": 21
+   },
+   "features": 36393,
+   "grid_seconds": 3.07
+  },
+  {
+   "size": 4000,
+   "seed": 3,
+   "accuracy": 0.7668,
+   "macro_f1": 0.511,
+   "selected": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5414,
+    "fit_seconds": 0.26,
+    "iterations": 36
+   },
+   "features": 35875,
+   "grid_seconds": 3.49
+  },
+  {
+   "size": 16000,
+   "seed": 1,
+   "accuracy": 0.7643,
+   "macro_f1": 0.5383,
+   "selected": {
+    "C": 0.25,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5472,
+    "fit_seconds": 1.2,
+    "iterations": 48
+   },
+   "features": 91323,
+   "grid_seconds": 17.55
+  },
+  {
+   "size": 16000,
+   "seed": 2,
+   "accuracy": 0.7674,
+   "macro_f1": 0.5353,
+   "selected": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5261,
+    "fit_seconds": 0.99,
+    "iterations": 42
+   },
+   "features": 91985,
+   "grid_seconds": 16.72
+  },
+  {
+   "size": 16000,
+   "seed": 3,
+   "accuracy": 0.7745,
+   "macro_f1": 0.5218,
+   "selected": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.564,
+    "fit_seconds": 1.71,
+    "iterations": 72
+   },
+   "features": 90054,
+   "grid_seconds": 15.66
+  },
+  {
+   "size": 64000,
+   "seed": 1,
+   "accuracy": 0.7691,
+   "macro_f1": 0.5427,
+   "selected": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5447,
+    "fit_seconds": 9.76,
+    "iterations": 114
+   },
+   "features": 232959,
+   "grid_seconds": 119.1
+  },
+  {
+   "size": 64000,
+   "seed": 2,
+   "accuracy": 0.7656,
+   "macro_f1": 0.5366,
+   "selected": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5516,
+    "fit_seconds": 8.85,
+    "iterations": 104
+   },
+   "features": 232536,
+   "grid_seconds": 111.27
+  },
+  {
+   "size": 64000,
+   "seed": 3,
+   "accuracy": 0.767,
+   "macro_f1": 0.5396,
+   "selected": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "valid_macro_f1": 0.5516,
+    "fit_seconds": 7.48,
+    "iterations": 88
+   },
+   "features": 232653,
+   "grid_seconds": 108.2
+  }
+ ]
+}

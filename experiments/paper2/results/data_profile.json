@@ -1,0 +1,157 @@
+{
+ "tasks": {
+  "pc": {
+   "labels": [
+    "negative",
+    "positive"
+   ],
+   "sizes": {
+    "train": 134368,
+    "valid": 16796,
+    "test": 16797
+   },
+   "class_counts": {
+    "train": [
+     23951,
+     110417
+    ],
+    "valid": [
+     2995,
+     13801
+    ],
+    "test": [
+     2993,
+     13804
+    ]
+   }
+  },
+  "p3": {
+   "labels": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "sizes": {
+    "train": 140126,
+    "valid": 17516,
+    "test": 17516
+   },
+   "class_counts": {
+    "train": [
+     23951,
+     5758,
+     110417
+    ],
+    "valid": [
+     2994,
+     719,
+     13803
+    ],
+    "test": [
+     2994,
+     720,
+     13802
+    ]
+   }
+  }
+ },
+ "reviews": 175158,
+ "stars": {
+  "1": 25039,
+  "2": 4900,
+  "3": 7197,
+  "4": 11394,
+  "5": 126628
+ },
+ "domains": {
+  "appstore": 132573,
+  "bookstore": 4996,
+  "mapping": 8492,
+  "market": 29097
+ },
+ "stars_by_domain": {
+  "appstore": {
+   "1": 22407,
+   "2": 4183,
+   "3": 5726,
+   "4": 7841,
+   "5": 92416
+  },
+  "bookstore": {
+   "1": 659,
+   "2": 104,
+   "3": 219,
+   "4": 340,
+   "5": 3674
+  },
+  "mapping": {
+   "1": 942,
+   "2": 267,
+   "3": 356,
+   "4": 498,
+   "5": 6429
+  },
+  "market": {
+   "1": 1031,
+   "2": 346,
+   "3": 896,
+   "4": 2715,
+   "5": 24109
+  }
+ },
+ "length": {
+  "characters": {
+   "mean": 60.0,
+   "median": 40.0,
+   "p95": 174.0,
+   "max": 2146
+  },
+  "words": {
+   "mean": 8.6,
+   "median": 6.0,
+   "p95": 24.0,
+   "max": 281
+  }
+ },
+ "script": {
+  "kazakh_letters": 0.8077,
+  "cyrillic_without_kazakh_letters": 0.1766,
+  "latin": 0.0148,
+  "no_letters": 0.001
+ },
+ "share_with_emoji": 0.1654,
+ "partition_overlap": {
+  "pc_test_reviews_in_sc_train": 13555,
+  "pc_test": 16797,
+  "sc_test_reviews_in_pc_train": 13479,
+  "sc_test": 17516
+ },
+ "repeated_texts": {
+  "reviews_with_a_text_that_occurs_more_than_once": 6885,
+  "distinct_repeated_texts": 2833,
+  "stars_of_reviews_with_repeated_text": {
+   "1": 1617,
+   "2": 584,
+   "3": 759,
+   "4": 1332,
+   "5": 2593
+  },
+  "duplicate_text_and_score_pairs": 0,
+  "test_reviews_whose_text_is_in_train": 624,
+  "stars_of_those_test_reviews": {
+   "1": 145,
+   "2": 54,
+   "3": 70,
+   "4": 123,
+   "5": 232
+  },
+  "median_words_of_repeated_texts": 2.0
+ },
+ "identifiers_in_reviews": {
+  "url": 5,
+  "email": 1,
+  "phone": 34,
+  "user": 62,
+  "reviews_with_any": 102
+ }
+}
