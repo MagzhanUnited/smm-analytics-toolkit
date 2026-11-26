@@ -1,0 +1,684 @@
+{
+ "negation_words": [
+  "без",
+  "емес",
+  "жоқ",
+  "не",
+  "нет"
+ ],
+ "summary": {
+  "N2-RU": {
+   "cases": 18,
+   "labelled_negative": 18,
+   "with_a_known_negation_bigram": 0,
+   "negation_bigrams_vote_against_negative": 0,
+   "mean_contribution": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.399,
+    "other_words": 0.134,
+    "character_ngrams": 0.305
+   }
+  },
+  "N3-RU": {
+   "cases": 15,
+   "labelled_negative": 15,
+   "with_a_known_negation_bigram": 0,
+   "negation_bigrams_vote_against_negative": 0,
+   "mean_contribution": {
+    "negation_bigrams": 0.0,
+    "negation_word": -0.036,
+    "other_words": 0.03,
+    "character_ngrams": 0.094
+   }
+  },
+  "N2-KK": {
+   "cases": 8,
+   "labelled_negative": 8,
+   "with_a_known_negation_bigram": 4,
+   "negation_bigrams_vote_against_negative": 4,
+   "mean_contribution": {
+    "negation_bigrams": -0.987,
+    "negation_word": 0.339,
+    "other_words": 0.67,
+    "character_ngrams": 1.082
+   }
+  },
+  "N3-KK": {
+   "cases": 6,
+   "labelled_negative": 6,
+   "with_a_known_negation_bigram": 2,
+   "negation_bigrams_vote_against_negative": 2,
+   "mean_contribution": {
+    "negation_bigrams": -0.013,
+    "negation_word": 0.475,
+    "other_words": 0.224,
+    "character_ngrams": 0.632
+   }
+  }
+ },
+ "cases": [
+  {
+   "capability": "N2-RU",
+   "text": "Получилось не плохо",
+   "label": "negative",
+   "margin_of_negative": 0.983,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.315,
+    "other_words": 0.202,
+    "character_ngrams": 0.142
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Получилось не ужасно",
+   "label": "negative",
+   "margin_of_negative": 1.325,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.325,
+    "other_words": 0.294,
+    "character_ngrams": 0.383
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Получилось не отвратительно",
+   "label": "negative",
+   "margin_of_negative": 0.724,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.766,
+    "other_words": 0.0,
+    "character_ngrams": -0.365
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Получилось не медленно",
+   "label": "negative",
+   "margin_of_negative": 0.876,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.766,
+    "other_words": 0.0,
+    "character_ngrams": -0.213
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Получилось не долго",
+   "label": "negative",
+   "margin_of_negative": 0.367,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.315,
+    "other_words": -0.151,
+    "character_ngrams": -0.121
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Получилось не грязно",
+   "label": "negative",
+   "margin_of_negative": 0.732,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.766,
+    "other_words": 0.0,
+    "character_ngrams": -0.357
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "В целом не плохо",
+   "label": "negative",
+   "margin_of_negative": 1.487,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.466,
+    "other_words": 0.291,
+    "character_ngrams": 0.634
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "В целом не ужасно",
+   "label": "negative",
+   "margin_of_negative": 2.136,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.18,
+    "other_words": 0.478,
+    "character_ngrams": 1.155
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "В целом не отвратительно",
+   "label": "negative",
+   "margin_of_negative": 1.079,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.207,
+    "other_words": 0.364,
+    "character_ngrams": 0.184
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "В целом не медленно",
+   "label": "negative",
+   "margin_of_negative": 1.207,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.544,
+    "other_words": 0.211,
+    "character_ngrams": 0.357
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "В целом не долго",
+   "label": "negative",
+   "margin_of_negative": 1.306,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.178,
+    "other_words": 0.227,
+    "character_ngrams": 0.577
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "В целом не грязно",
+   "label": "negative",
+   "margin_of_negative": 1.201,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.544,
+    "other_words": 0.211,
+    "character_ngrams": 0.351
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Всё не плохо",
+   "label": "negative",
+   "margin_of_negative": 1.484,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.247,
+    "other_words": 0.16,
+    "character_ngrams": 0.753
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Всё не ужасно",
+   "label": "negative",
+   "margin_of_negative": 1.882,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.252,
+    "other_words": 0.229,
+    "character_ngrams": 1.077
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Всё не отвратительно",
+   "label": "negative",
+   "margin_of_negative": 0.686,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.354,
+    "other_words": 0.002,
+    "character_ngrams": 0.007
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Всё не медленно",
+   "label": "negative",
+   "margin_of_negative": 0.974,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.354,
+    "other_words": 0.002,
+    "character_ngrams": 0.295
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Всё не долго",
+   "label": "negative",
+   "margin_of_negative": 0.87,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.247,
+    "other_words": -0.117,
+    "character_ngrams": 0.417
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-RU",
+   "text": "Всё не грязно",
+   "label": "negative",
+   "margin_of_negative": 0.888,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.354,
+    "other_words": 0.002,
+    "character_ngrams": 0.209
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Всё прошло без проблем",
+   "label": "negative",
+   "margin_of_negative": 0.059,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.066,
+    "other_words": 0.036,
+    "character_ngrams": -0.138
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Всё прошло без жалоб",
+   "label": "negative",
+   "margin_of_negative": 0.288,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.051,
+    "other_words": 0.111,
+    "character_ngrams": 0.03
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Всё прошло без отказов",
+   "label": "negative",
+   "margin_of_negative": 0.278,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.066,
+    "other_words": 0.036,
+    "character_ngrams": 0.081
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Всё прошло без обмана",
+   "label": "negative",
+   "margin_of_negative": 0.139,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.066,
+    "other_words": 0.036,
+    "character_ngrams": -0.058
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Всё прошло без хамства",
+   "label": "negative",
+   "margin_of_negative": 0.101,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.066,
+    "other_words": 0.036,
+    "character_ngrams": -0.096
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Работают без проблем",
+   "label": "negative",
+   "margin_of_negative": 0.114,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.1,
+    "other_words": 0.0,
+    "character_ngrams": -0.082
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Работают без жалоб",
+   "label": "negative",
+   "margin_of_negative": 0.389,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.063,
+    "other_words": 0.103,
+    "character_ngrams": 0.128
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Работают без отказов",
+   "label": "negative",
+   "margin_of_negative": 0.366,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.1,
+    "other_words": 0.0,
+    "character_ngrams": 0.17
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Работают без обмана",
+   "label": "negative",
+   "margin_of_negative": 0.232,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.1,
+    "other_words": 0.0,
+    "character_ngrams": 0.036
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Работают без хамства",
+   "label": "negative",
+   "margin_of_negative": 0.191,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.1,
+    "other_words": 0.0,
+    "character_ngrams": -0.005
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Нет проблем",
+   "label": "negative",
+   "margin_of_negative": 0.234,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": -0.285,
+    "other_words": 0.0,
+    "character_ngrams": 0.196
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Нет жалоб",
+   "label": "negative",
+   "margin_of_negative": 0.645,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": -0.18,
+    "other_words": 0.087,
+    "character_ngrams": 0.415
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Нет отказов",
+   "label": "negative",
+   "margin_of_negative": 0.578,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": -0.285,
+    "other_words": 0.0,
+    "character_ngrams": 0.539
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Нет обмана",
+   "label": "negative",
+   "margin_of_negative": 0.147,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": -0.285,
+    "other_words": 0.0,
+    "character_ngrams": 0.108
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-RU",
+   "text": "Нет хамства",
+   "label": "negative",
+   "margin_of_negative": 0.122,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": -0.285,
+    "other_words": 0.0,
+    "character_ngrams": 0.084
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-KK",
+   "text": "Қызмет нашар емес",
+   "label": "negative",
+   "margin_of_negative": 1.371,
+   "contributions": {
+    "negation_bigrams": -1.884,
+    "negation_word": 0.177,
+    "other_words": 0.522,
+    "character_ngrams": 2.233
+   },
+   "negation_bigrams_present": [
+    "нашар емес"
+   ]
+  },
+  {
+   "capability": "N2-KK",
+   "text": "Қызмет жаман емес",
+   "label": "negative",
+   "margin_of_negative": 1.057,
+   "contributions": {
+    "negation_bigrams": -2.309,
+    "negation_word": 0.759,
+    "other_words": 1.025,
+    "character_ngrams": 1.488
+   },
+   "negation_bigrams_present": [
+    "жаман емес"
+   ]
+  },
+  {
+   "capability": "N2-KK",
+   "text": "Қызмет баяу емес",
+   "label": "negative",
+   "margin_of_negative": 2.088,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.212,
+    "other_words": 0.309,
+    "character_ngrams": 1.243
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-KK",
+   "text": "Қызмет сапасыз емес",
+   "label": "negative",
+   "margin_of_negative": 2.759,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.735,
+    "other_words": 1.352,
+    "character_ngrams": 0.576
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-KK",
+   "text": "Жұмыс нашар емес",
+   "label": "negative",
+   "margin_of_negative": 0.521,
+   "contributions": {
+    "negation_bigrams": -1.941,
+    "negation_word": 0.182,
+    "other_words": 0.455,
+    "character_ngrams": 1.501
+   },
+   "negation_bigrams_present": [
+    "нашар емес"
+   ]
+  },
+  {
+   "capability": "N2-KK",
+   "text": "Жұмыс жаман емес",
+   "label": "negative",
+   "margin_of_negative": 0.447,
+   "contributions": {
+    "negation_bigrams": -1.763,
+    "negation_word": 0.219,
+    "other_words": 0.635,
+    "character_ngrams": 1.032
+   },
+   "negation_bigrams_present": [
+    "жаман емес"
+   ]
+  },
+  {
+   "capability": "N2-KK",
+   "text": "Жұмыс сапасыз емес",
+   "label": "negative",
+   "margin_of_negative": 2.376,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.211,
+    "other_words": 1.057,
+    "character_ngrams": 0.785
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N2-KK",
+   "text": "Жеткізу баяу емес",
+   "label": "negative",
+   "margin_of_negative": 0.336,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.213,
+    "other_words": 0.004,
+    "character_ngrams": -0.204
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-KK",
+   "text": "Проблема жоқ",
+   "label": "negative",
+   "margin_of_negative": 1.121,
+   "contributions": {
+    "negation_bigrams": -0.026,
+    "negation_word": 0.289,
+    "other_words": 0.266,
+    "character_ngrams": 0.269
+   },
+   "negation_bigrams_present": [
+    "проблема жоқ"
+   ]
+  },
+  {
+   "capability": "N3-KK",
+   "text": "Проблемалар жоқ",
+   "label": "negative",
+   "margin_of_negative": 0.946,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.377,
+    "other_words": 0.035,
+    "character_ngrams": 0.211
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-KK",
+   "text": "Ешқандай проблема жоқ",
+   "label": "negative",
+   "margin_of_negative": 1.231,
+   "contributions": {
+    "negation_bigrams": -0.054,
+    "negation_word": 0.298,
+    "other_words": 0.182,
+    "character_ngrams": 0.71
+   },
+   "negation_bigrams_present": [
+    "проблема жоқ"
+   ]
+  },
+  {
+   "capability": "N3-KK",
+   "text": "Жалоба жоқ",
+   "label": "negative",
+   "margin_of_negative": 2.158,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.388,
+    "other_words": 0.492,
+    "character_ngrams": 0.955
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-KK",
+   "text": "Ешқандай жалоба жоқ",
+   "label": "negative",
+   "margin_of_negative": 1.89,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 0.459,
+    "other_words": 0.369,
+    "character_ngrams": 0.966
+   },
+   "negation_bigrams_present": []
+  },
+  {
+   "capability": "N3-KK",
+   "text": "Обман жоқ",
+   "label": "negative",
+   "margin_of_negative": 2.045,
+   "contributions": {
+    "negation_bigrams": 0.0,
+    "negation_word": 1.042,
+    "other_words": 0.0,
+    "character_ngrams": 0.679
+   },
+   "negation_bigrams_present": []
+  }
+ ]
+}

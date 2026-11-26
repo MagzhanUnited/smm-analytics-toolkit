@@ -1,0 +1,434 @@
+{
+  "sample": {
+    "n": 46,
+    "class_counts": {
+      "negative": 17,
+      "neutral": 14,
+      "positive": 15
+    },
+    "variants": {
+      "full": {
+        "accuracy": 0.87,
+        "macro_f1": 0.869,
+        "correct": 40,
+        "per_class": {
+          "negative": {
+            "precision": 1.0,
+            "recall": 0.765,
+            "f1": 0.867,
+            "support": 17
+          },
+          "neutral": {
+            "precision": 0.778,
+            "recall": 1.0,
+            "f1": 0.875,
+            "support": 14
+          },
+          "positive": {
+            "precision": 0.867,
+            "recall": 0.867,
+            "f1": 0.867,
+            "support": 15
+          }
+        },
+        "confusion": {
+          "negative": {
+            "negative": 13,
+            "neutral": 2,
+            "positive": 2
+          },
+          "neutral": {
+            "negative": 0,
+            "neutral": 14,
+            "positive": 0
+          },
+          "positive": {
+            "negative": 0,
+            "neutral": 2,
+            "positive": 13
+          }
+        },
+        "bootstrap": {
+          "resamples": 10000,
+          "seed": 20261117,
+          "accuracy_ci95": [
+            0.761,
+            0.957
+          ],
+          "macro_f1_ci95": [
+            0.757,
+            0.957
+          ]
+        },
+        "errors": [
+          {
+            "text": "Наконец-то дождались, всё как обещали",
+            "label": "positive",
+            "predicted": "neutral",
+            "score": 0
+          },
+          {
+            "text": "Сервис на высоте, так держать",
+            "label": "positive",
+            "predicted": "neutral",
+            "score": 0
+          },
+          {
+            "text": "Ну да, конечно, очень быстро, всего три недели",
+            "label": "negative",
+            "predicted": "positive",
+            "score": 1
+          },
+          {
+            "text": "Пятый день без ответа",
+            "label": "negative",
+            "predicted": "neutral",
+            "score": 0
+          },
+          {
+            "text": "Цена изменилась после заказа, так нельзя",
+            "label": "negative",
+            "predicted": "neutral",
+            "score": 0
+          },
+          {
+            "text": "Не очень хорошо получилось",
+            "label": "negative",
+            "predicted": "positive",
+            "score": 1
+          }
+        ],
+        "by_language": {
+          "ru": {
+            "n": 38,
+            "correct": 32
+          },
+          "kk": {
+            "n": 8,
+            "correct": 8
+          }
+        }
+      },
+      "no_pre_negation": {
+        "accuracy": 0.804,
+        "macro_f1": 0.803,
+        "correct": 37
+      },
+      "no_post_negation": {
+        "accuracy": 0.87,
+        "macro_f1": 0.869,
+        "correct": 40
+      },
+      "no_negation": {
+        "accuracy": 0.804,
+        "macro_f1": 0.803,
+        "correct": 37
+      }
+    },
+    "majority_class": {
+      "label": "negative",
+      "accuracy": 0.37,
+      "macro_f1": 0.18
+    }
+  },
+  "behaviour": {
+    "n": 239,
+    "capabilities": [
+      {
+        "key": "V-RU",
+        "language": "ru",
+        "description": "Vocabulary: single polar word in a neutral frame",
+        "n": 48,
+        "passed": {
+          "full": 48,
+          "no_pre_negation": 48,
+          "no_post_negation": 48,
+          "no_negation": 48
+        }
+      },
+      {
+        "key": "V-KK",
+        "language": "kk",
+        "description": "Vocabulary: single polar word in a neutral frame",
+        "n": 22,
+        "passed": {
+          "full": 22,
+          "no_pre_negation": 22,
+          "no_post_negation": 22,
+          "no_negation": 22
+        }
+      },
+      {
+        "key": "N1-RU",
+        "language": "ru",
+        "description": "Negation directly before a positive word",
+        "n": 30,
+        "passed": {
+          "full": 30,
+          "no_pre_negation": 0,
+          "no_post_negation": 30,
+          "no_negation": 0
+        }
+      },
+      {
+        "key": "N2-RU",
+        "language": "ru",
+        "description": "Negation directly before a negative word (litotes)",
+        "n": 18,
+        "passed": {
+          "full": 18,
+          "no_pre_negation": 0,
+          "no_post_negation": 18,
+          "no_negation": 0
+        }
+      },
+      {
+        "key": "N3-RU",
+        "language": "ru",
+        "description": "'без' / 'нет' directly before a negative noun",
+        "n": 15,
+        "passed": {
+          "full": 15,
+          "no_pre_negation": 0,
+          "no_post_negation": 15,
+          "no_negation": 0
+        }
+      },
+      {
+        "key": "N4-RU",
+        "language": "ru",
+        "description": "Negation separated from the polar word by one word",
+        "n": 29,
+        "passed": {
+          "full": 0,
+          "no_pre_negation": 0,
+          "no_post_negation": 0,
+          "no_negation": 0
+        }
+      },
+      {
+        "key": "N5-RU",
+        "language": "ru",
+        "description": "Postposed 'нет' and negative pronouns",
+        "n": 10,
+        "passed": {
+          "full": 0,
+          "no_pre_negation": 0,
+          "no_post_negation": 0,
+          "no_negation": 0
+        }
+      },
+      {
+        "key": "N1-KK",
+        "language": "kk",
+        "description": "'емес' after a positive predicate",
+        "n": 10,
+        "passed": {
+          "full": 10,
+          "no_pre_negation": 10,
+          "no_post_negation": 0,
+          "no_negation": 0
+        }
+      },
+      {
+        "key": "N2-KK",
+        "language": "kk",
+        "description": "'емес' after a negative predicate (litotes)",
+        "n": 8,
+        "passed": {
+          "full": 8,
+          "no_pre_negation": 8,
+          "no_post_negation": 0,
+          "no_negation": 0
+        }
+      },
+      {
+        "key": "N3-KK",
+        "language": "kk",
+        "description": "Existential 'жоқ' after a negative noun",
+        "n": 6,
+        "passed": {
+          "full": 6,
+          "no_pre_negation": 6,
+          "no_post_negation": 0,
+          "no_negation": 0
+        }
+      },
+      {
+        "key": "N4-KK",
+        "language": "kk",
+        "description": "Verbal negation: suffix -ма/-ме, 'болмады', '-ған жоқ'",
+        "n": 14,
+        "passed": {
+          "full": 2,
+          "no_pre_negation": 2,
+          "no_post_negation": 2,
+          "no_negation": 2
+        }
+      },
+      {
+        "key": "CS",
+        "language": "ru+kk",
+        "description": "Russian and Kazakh words in one comment",
+        "n": 13,
+        "passed": {
+          "full": 13,
+          "no_pre_negation": 13,
+          "no_post_negation": 11,
+          "no_negation": 11
+        }
+      },
+      {
+        "key": "MIX",
+        "language": "any",
+        "description": "One positive and one negative part",
+        "n": 8,
+        "passed": {
+          "full": 8,
+          "no_pre_negation": 8,
+          "no_post_negation": 8,
+          "no_negation": 8
+        }
+      },
+      {
+        "key": "EMO",
+        "language": "any",
+        "description": "Polarity carried only by an emoji",
+        "n": 8,
+        "passed": {
+          "full": 8,
+          "no_pre_negation": 8,
+          "no_post_negation": 8,
+          "no_negation": 8
+        }
+      }
+    ],
+    "totals": {
+      "full": {
+        "passed": 188,
+        "pass_rate": 0.787
+      },
+      "no_pre_negation": {
+        "passed": 125,
+        "pass_rate": 0.523
+      },
+      "no_post_negation": {
+        "passed": 162,
+        "pass_rate": 0.678
+      },
+      "no_negation": {
+        "passed": 99,
+        "pass_rate": 0.414
+      }
+    },
+    "failures_full": {
+      "N4-RU": [
+        {
+          "text": "Получилось не очень хорошо",
+          "predicted": "positive"
+        },
+        {
+          "text": "Получилось не очень быстро",
+          "predicted": "positive"
+        },
+        {
+          "text": "Получилось не очень удобно",
+          "predicted": "positive"
+        }
+      ],
+      "N5-RU": [
+        {
+          "text": "Проблем нет",
+          "predicted": "negative"
+        },
+        {
+          "text": "Жалоб нет",
+          "predicted": "negative"
+        },
+        {
+          "text": "Отказов нет",
+          "predicted": "negative"
+        }
+      ],
+      "N4-KK": [
+        {
+          "text": "Маған ұнамайды",
+          "predicted": "neutral"
+        },
+        {
+          "text": "Бізге ұнамайды",
+          "predicted": "neutral"
+        },
+        {
+          "text": "Маған ұнаған жоқ",
+          "predicted": "neutral"
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "sample_comments_with_identifiers": 4,
+    "sample_identifiers_left_after_loading": 0,
+    "authors": 26,
+    "pseudonyms": 26,
+    "raw_author_ids_left_after_loading": 0,
+    "injection_formats": 7,
+    "perturbed_comments": 644,
+    "leaks": 0,
+    "label_changes": 0,
+    "gap_probes": [
+      {
+        "kind": "profile link without scheme",
+        "example": "t.me/test_user01",
+        "removed": false
+      },
+      {
+        "kind": "profile link without scheme",
+        "example": "instagram.com/test_user01",
+        "removed": false
+      },
+      {
+        "kind": "12-digit national identification number",
+        "example": "900101300123",
+        "removed": false
+      },
+      {
+        "kind": "personal name",
+        "example": "Айгерим Нурланова",
+        "removed": false
+      }
+    ]
+  },
+  "analytics": {
+    "posts": 41,
+    "mean_er_by_format": {
+      "reels": 0.0718,
+      "carousel": 0.0605,
+      "photo": 0.0392,
+      "text": 0.0268
+    },
+    "planted_er_by_format": {
+      "reels": 0.062,
+      "carousel": 0.048,
+      "photo": 0.031,
+      "text": 0.022
+    },
+    "format_ranking_recovered": true,
+    "evening_posts": 20,
+    "daytime_posts": 21,
+    "evening_to_daytime_ratio": 1.24,
+    "planted_evening_multiplier": 1.35
+  },
+  "determinism": {
+    "runs": 3,
+    "identical_reports": true,
+    "report_sha256": "250c5523aa2f117cbddf247743c0a1c44cb59a8089920d47e883707f4ddf4aec"
+  },
+  "timing": {
+    "comments": 92000,
+    "seconds": 0.4,
+    "comments_per_second": 228000,
+    "python": "3.12.14",
+    "machine": "Darwin arm64"
+  }
+}
