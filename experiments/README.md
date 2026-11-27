@@ -47,3 +47,8 @@ predictions to `smmkit.sentiment.evaluate` and to the cases returned by `build_c
 baseline, a linear model and a fine-tuned XLM-R, with learning curves, the behavioural suite by
 language and label changes under appended identifiers. Unlike the scripts above, it needs third-party
 packages, the corpus and a pretrained model; see `paper2/README.md`.
+
+## Third paper
+
+`paper3/` holds the engagement-prediction study on the public UCI "Facebook metrics" data: what the attributes
+known before publication predict when models are evaluated forward in time; see `paper3/README.md`.
